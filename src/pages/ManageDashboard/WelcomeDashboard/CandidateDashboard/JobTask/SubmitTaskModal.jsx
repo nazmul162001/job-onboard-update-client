@@ -201,14 +201,14 @@ const SubmitTaskModal = ({ singleTask }) => {
               </div>
 
               <button className="rounded-lg text-lg py-1  font-bold  bg-primary w-full  flex items-center justify-center  text-white">
-                Submit
+                Complete 
               </button>
             </form>
           </div>
         </label>
       </label>
       <label for="submit_task_modal">
-        <button className="seeTaskDetails submitBtan">
+        <button className="seeTaskDetails ">
           <div className="svg-wrapper-1">
             <div className="svg-wrapper">
               <BsCheckCircleFill />

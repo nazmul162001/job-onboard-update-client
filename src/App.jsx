@@ -38,7 +38,7 @@ import SendMailCandidates from "./pages/ManageDashboard/Recruitment/SendMailCand
 import SingleJobCandidates from "./pages/ManageDashboard/Recruitment/SingleJobCandidates/SingleJobCandidates";
 import ViewSubmission from "./pages/ManageDashboard/Recruitment/SingleJobCandidates/ViewSubmission/ViewSubmission";
 import JobTask from "./pages/ManageDashboard/WelcomeDashboard/CandidateDashboard/JobTask/JobTask";
-import TaskDetais from "./pages/ManageDashboard/WelcomeDashboard/CandidateDashboard/JobTask/TaskDetais";
+import TaskDetails from "./pages/ManageDashboard/WelcomeDashboard/CandidateDashboard/JobTask/TaskDetails";
 import AllRecentApplicants from "./pages/ManageDashboard/WelcomeDashboard/HrDashboard/AllRecentApplicants/AllRecentApplicants";
 import WelcomeDashboard from "./pages/ManageDashboard/WelcomeDashboard/WelcomeDashboard";
 import Pricing from "./pages/PaymentSystem/Pricing/Pricing";
@@ -129,7 +129,7 @@ function App() {
             <Route path="appliedJobs" element={<AppliedJobs />} />
             <Route path="jobs" element={<ManageAllJobs />} />
             <Route path="task" element={<JobTask />} />
-            <Route path="task/:taskId" element={<TaskDetais />} />
+            <Route path="task/:taskId" element={<TaskDetails />} />
             <Route
               path="recruitment"
               element={

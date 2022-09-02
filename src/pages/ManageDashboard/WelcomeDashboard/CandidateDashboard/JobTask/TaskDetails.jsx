@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import Loading from "../../../../../components/Loading/Loading";
 import { BASE_API } from "../../../../../config";
 import SubmitTaskModal from "./SubmitTaskModal";
-const TaskDetais = () => {
+const TaskDetails = () => {
   const { taskId } = useParams();
   const [singleTask, setSingleTask] = useState({});
   // const [singleSubmittedTask, setSingleSubmittedTask] = useState({});
@@ -74,13 +74,8 @@ const TaskDetais = () => {
           <h2 className="cName mb-[30px] text-2xl pr-5 font-bold">
             {companyName}
           </h2>
-          {filtered?.map((stat) =>
-            stat?.status === true ? (
-              <SubmitTaskModal singleTask={singleTask} />
-            ) : (
-              <></>
-            )
-          )}
+
+          <SubmitTaskModal singleTask={singleTask}/>
         </div>
       </div>
 
@@ -92,4 +87,4 @@ const TaskDetais = () => {
   );
 };
 
-export default TaskDetais;
+export default TaskDetails;

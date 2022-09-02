@@ -58,7 +58,7 @@ const ViewSubmission = () => {
 
           <div className=''>
             <h2 className="font-semibold font-mono text-xl mb-2 text-center">Assignment Submitted(<small>{submissionData?.submitDate}</small>)</h2>
-            <p className=" w-full my-5 border p-3 rounded-xl text-justify">{submissionData?.taskInformation}</p>
+            <p className=" w-full my-5  bg-base-300 shadow-lg p-3 rounded-xl text-justify">{submissionData?.taskInformation}</p>
             <div className='flex justify-evenly items-center flex-col lg:flex-row space-y-2'>
               <a className='text-lg flex gap-x-2 items-center' href={submissionData?.sumitGithubLink} target="_blank" rel="noopener noreferrer"><FaGithub /> Source Code </a>
               <a className='text-lg flex gap-x-2 items-center' href={submissionData?.submitLiveLink} target="_blank" rel="noopener noreferrer"><TbWorldDownload /> Live Link </a>
