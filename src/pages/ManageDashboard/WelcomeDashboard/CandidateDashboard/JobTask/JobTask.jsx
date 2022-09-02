@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Loading from "../../../../../Components/Loading/Loading";
+import Loading from "../../../../../components/Loading/Loading";
 import { fetchAllTasks } from "../../../../../Features/AllTasks/AllTasksSlice";
-import useTitle from "../../../../../Hooks/useTitle";
+import useTitle from "../../../../../hooks/useTitle";
 import AllJobTasks from "./AllJobTasks";
 import "./JobTaskCss/JobTask.css";
 

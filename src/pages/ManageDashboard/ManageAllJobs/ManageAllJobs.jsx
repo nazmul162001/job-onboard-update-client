@@ -1,10 +1,10 @@
 import React from "react";
 import axios from "axios";
 import { BASE_API } from "../../../config";
-import useTitle from "../../../Hooks/useTitle";
+import useTitle from "../../../hooks/useTitle";
 import JobsCard from "./JobsCard";
 import { useQuery } from "@tanstack/react-query";
-import Loading from "../../../Components/Loading/Loading";
+import Loading from "../../../components/Loading/Loading";
 
 const ManageAllJobs = () => {
   useTitle("Manage All Jobs");

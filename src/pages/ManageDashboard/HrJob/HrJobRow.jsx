@@ -3,7 +3,7 @@ import Swal from "sweetalert2";
 import { AiOutlineDelete } from "react-icons/ai";
 import { FiEdit } from "react-icons/fi";
 import { BASE_API } from "../../../config";
-import Loading from "../../../Components/Loading/Loading";
+import Loading from "../../../components/Loading/Loading";
 import moment from "moment";
 
 const HrJobRow = ({ job, index, refetch, isLoading }) => {

@@ -1,6 +1,6 @@
 import React from 'react';
-import openings from '../../Assets/images/applicants-tracking/tracking_icon.svg'
-import resumeTrack from '../../Assets/images/applicants-tracking/resume_tracking.svg'
+import openings from '../Assets/images/applicants-tracking/tracking_icon.svg'
+import resumeTrack from '../Assets/images/applicants-tracking/resume_tracking.svg'
 
 const ResumeScreening = () => {
   return (

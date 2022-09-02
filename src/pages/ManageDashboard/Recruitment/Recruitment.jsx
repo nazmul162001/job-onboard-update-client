@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import useTitle from "../../../Hooks/useTitle";
+import useTitle from "../../../hooks/useTitle";
 import RecruitmentCard from "./RecruitmentCard";
-// import useHrJob from "../../../Hooks/useHrJob";
-import Loading from "../../../Components/Loading/Loading";
+// import useHrJob from "../../../hooks/useHrJob";
+import Loading from "../../../components/Loading/Loading";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchHrJobs } from "../../../Features/HrJobs/HrJobsSlice";
 

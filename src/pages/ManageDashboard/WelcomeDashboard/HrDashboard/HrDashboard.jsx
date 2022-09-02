@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { InitializeContext } from "../../../../App";
-import Loading from "../../../../Components/Loading/Loading";
+import Loading from "../../../../components/Loading/Loading";
 import HrChart from "../../HrChart/HrChart";
 import RecentApplicants from "./RecentApplicants/RecentApplicants";
 import RecentJobs from "./RecentJobs/RecentJobs";

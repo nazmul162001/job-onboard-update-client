@@ -1,6 +1,6 @@
 import React from 'react';
-import openings from '../../Assets/images/applicants-tracking/tracking_icon.svg'
-import candidate from '../../Assets/images/applicants-tracking/smart_candidate.svg'
+import openings from '../Assets/images/applicants-tracking/tracking_icon.svg'
+import candidate from '../Assets/images/applicants-tracking/smart_candidate.svg'
 
 const SmartCandidate = () => {
   return (

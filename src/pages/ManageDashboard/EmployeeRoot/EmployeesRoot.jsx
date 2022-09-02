@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Swal from "sweetalert2";
-import Loading from "../../../Components/Loading/Loading";
+import Loading from "../../../components/Loading/Loading";
 import { BASE_API } from "../../../config";
 import { fetchAllEmployeDetails } from "../../../Features/AllEmployeDetails/AllEmployeDetailsSlice";
-import useTitle from "../../../Hooks/useTitle";
+import useTitle from "../../../hooks/useTitle";
 import AddEmployee from "./AddEmployee";
 import AllEmployees from "./AllEmployees";
 import EditEmployeeModal from "./EditEmployeeModal";

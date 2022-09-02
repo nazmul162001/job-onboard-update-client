@@ -3,15 +3,15 @@ import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import auth from "../../../Auth/Firebase/Firebase.init";
-import Loading from "../../../Components/Loading/Loading";
+import Loading from "../../../components/Loading/Loading";
 import { BASE_API } from "../../../config";
-import useTitle from "../../../Hooks/useTitle";
+import useTitle from "../../../hooks/useTitle";
 import { useAuthState } from "react-firebase-hooks/auth";
-import useAdmin from "../../../Hooks/useAdmin";
-import useHrManager from "../../../Hooks/useHrManager";
+import useAdmin from "../../../hooks/useAdmin";
+import useHrManager from "../../../hooks/useHrManager";
 import { FiEdit } from "react-icons/fi";
 import { BsFolderSymlink, BsLink45Deg } from "react-icons/bs";
-import useCandidateInfo from "../../../Hooks/useCandidateInfo";
+import useCandidateInfo from "../../../hooks/useCandidateInfo";
 
 const Profile = () => {
   useTitle("Profile");

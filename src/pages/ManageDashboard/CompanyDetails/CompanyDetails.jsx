@@ -5,9 +5,9 @@ import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { FiEdit } from "react-icons/fi";
 import auth from "../../../Auth/Firebase/Firebase.init";
-import Loading from "../../../Components/Loading/Loading";
+import Loading from "../../../components/Loading/Loading";
 import { BASE_API } from "../../../config";
-import useTitle from "../../../Hooks/useTitle";
+import useTitle from "../../../hooks/useTitle";
 
 const CompanyDetails = () => {
   useTitle("Company Info");

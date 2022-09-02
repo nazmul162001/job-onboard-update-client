@@ -2,7 +2,7 @@ import { signOut } from "firebase/auth";
 import toast from "react-hot-toast";
 import { Navigate } from "react-router-dom";
 import auth from "../Firebase/Firebase.init";
-import useHrManager from "../../Hooks/useHrManager";
+import useHrManager from "../../hooks/useHrManager";
 
 const RequireHr = ({ children }) => {
   const [isHr, loading] = useHrManager();

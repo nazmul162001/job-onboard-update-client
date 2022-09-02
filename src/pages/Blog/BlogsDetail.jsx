@@ -4,7 +4,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { useParams } from "react-router-dom";
 import auth from "../../Auth/Firebase/Firebase.init";
 import { BASE_API } from "../../config";
-import useAdmin from "../../Hooks/useAdmin";
+import useAdmin from "../../hooks/useAdmin";
 import Footer from "../../Shared/Footer/Footer";
 import EditBlog from "./EditBlog";
 const BlogsDetail = () => {

@@ -10,9 +10,9 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import toast from "react-hot-toast";
 import auth from "../../../Auth/Firebase/Firebase.init";
-import Loading from "../../../Components/Loading/Loading";
-import useToken from "../../../Hooks/useToken";
-import useTitle from "../../../Hooks/useTitle";
+import Loading from "../../../components/Loading/Loading";
+import useToken from "../../../hooks/useToken";
+import useTitle from "../../../hooks/useTitle";
 import axios from "axios";
 import { BASE_API } from "../../../config";
 

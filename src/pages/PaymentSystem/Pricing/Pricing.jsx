@@ -38,7 +38,6 @@ const Pricing = () => {
             <li className='my-2 text-center text-gray-500'> <span className='text-gray-500 line-through'>Smart Workflow</span> </li>
             <li className='my-2 text-center text-gray-500'> <span className='text-gray-500 line-through'>Remote Interview</span> </li>
             <li className='my-2 text-center text-gray-500'> <span className='text-gray-500 line-through'>Custom domain</span> </li>
-            <li className='my-2 text-center text-gray-500'> <span className='text-gray-500 line-through'>Easy.Jobs Ai(Beta)</span> </li>
             <li className='my-2 text-center text-gray-500'> <span className='text-gray-500 line-through'>Screening Questions</span> </li>
             <li className='my-2 text-center text-sky-500'> <span className='text-black'>24/7 Support</span> </li>
           </div>
@@ -61,7 +60,6 @@ const Pricing = () => {
             <li className='my-2 text-center text-sky-500'> <span className='text-black'>Smart Workflow</span> </li>
             <li className='my-2 text-center text-sky-500'> <span className='text-black'>Remote Interview</span> </li>
             <li className='my-2 text-center text-gray-500'> <span className='text-gray-500 line-through'>Custom domain</span> </li>
-            <li className='my-2 text-center text-sky-500'> <span className='text-black'>Easy.Jobs Ai(Beta)</span> </li>
             <li className='my-2 text-center text-gray-500'> <span className='text-gray-500 line-through'>Screening Questions</span> </li>
             <li className='my-2 text-center text-sky-500'> <span className='text-black'>24/7 Support</span> </li>
           </div>
@@ -84,7 +82,6 @@ const Pricing = () => {
             <li className='my-2 text-center text-sky-500'> <span className='text-black'>Smart Workflow</span> </li>
             <li className='my-2 text-center text-sky-500'> <span className='text-black'>Remote Interview</span> </li>
             <li className='my-2 text-center text-sky-500'> <span className='text-black'>Custom domain</span> </li>
-            <li className='my-2 text-center text-sky-500'> <span className='text-black'>Easy.Jobs Ai(Beta)</span> </li>
             <li className='my-2 text-center text-sky-500'> <span className='text-black'>Screening Questions</span> </li>
             <li className='my-2 text-center text-sky-500'> <span className='text-black'>24/7 Support</span> </li>
           </div>

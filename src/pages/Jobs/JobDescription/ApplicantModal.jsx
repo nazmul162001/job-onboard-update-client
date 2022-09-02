@@ -3,8 +3,8 @@ import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
 import auth from '../../../Auth/Firebase/Firebase.init';
 import { BASE_API } from '../../../config';
-import Loading from '../../../Components/Loading/Loading';
-import useCandidateInfo from '../../../Hooks/useCandidateInfo';
+import Loading from '../../../components/Loading/Loading';
+import useCandidateInfo from '../../../hooks/useCandidateInfo';
 import { useNavigate } from 'react-router-dom';
 
 const ApplicantModal = ({ job }) => {

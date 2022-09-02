@@ -1,23 +1,13 @@
 import React from "react";
-import { BASE_API } from "../../../config";
 import Chart from "react-apexcharts";
-// import { useQuery } from "@tanstack/react-query";
-// import auth from "../../../Auth/Firebase/Firebase.init";
-import Loading from "../../../Components/Loading/Loading";
+import Loading from "../../../components/Loading/Loading";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchHrChart } from "../../../Features/HrChart/HrChartSlice";
 
 const HrChart = () => {
-  // const { data, isLoading } = useQuery(["hrEmployees"], () => {
-  //   fetch(`${BASE_API}/userEmployees?email=${auth?.currentUser?.email}`, {
-  //     headers: {
-  //       authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-  //     },
-  //   }).then((res) => res.json());
-  // });
 
-  const {isLoading, charts, error}
+  const {isLoading, charts}
    = useSelector(state => state.charts)
 
   const dispatch = useDispatch();

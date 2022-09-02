@@ -1,7 +1,7 @@
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../../Auth/Firebase/Firebase.init";
-import useTitle from "../../../../Hooks/useTitle";
+import useTitle from "../../../../hooks/useTitle";
 
 const AdminDashboard = () => {
   useTitle("Dashboard");

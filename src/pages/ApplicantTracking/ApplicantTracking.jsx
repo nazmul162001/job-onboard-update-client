@@ -4,10 +4,10 @@ import JobOnBoardTrial from './JobOnBoardTrial';
 import ManageOpeningJobs from './ManageOpeningJobs';
 import ResumeScreening from './ResumeScreening';
 import SmartCandidate from './SmartCandidate';
-import Footer from '../../../Shared/Footer/Footer'
 import MakeOffers from './MakeOffers';
 import './ApplicantsTracking.css'
 import { useNavigate } from 'react-router-dom';
+import Footer from '../../Shared/Footer/Footer';
 
 const ApplicantTracking = () => {
   const navigate = useNavigate()

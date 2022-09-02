@@ -8,9 +8,9 @@ import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import auth from "../../../Auth/Firebase/Firebase.init";
-import Loading from "../../../Components/Loading/Loading";
-import useTitle from "../../../Hooks/useTitle";
-import useTokenForHrManager from "../../../Hooks/useTokenForHrManager";
+import Loading from "../../../components/Loading/Loading";
+import useTitle from "../../../hooks/useTitle";
+import useTokenForHrManager from "../../../hooks/useTokenForHrManager";
 import axios from "axios";
 import { BASE_API } from "../../../config";
 

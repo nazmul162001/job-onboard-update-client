@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import Loading from "../../../../../Components/Loading/Loading";
+import Loading from "../../../../../components/Loading/Loading";
 import { BASE_API } from "../../../../../config";
 import SubmitTaskModal from "./SubmitTaskModal";
 const TaskDetais = () => {

@@ -3,10 +3,10 @@ import React, { useContext, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { InitializeContext } from "../../../../App";
-import Loading from "../../../../Components/Loading/Loading";
+import Loading from "../../../../components/Loading/Loading";
 import { fetchAllTasks } from "../../../../Features/AllTasks/AllTasksSlice";
 import { fetchAppliedJobs } from "../../../../Features/AppliedJobs/AppliedJobsSlice";
-import useTitle from "../../../../Hooks/useTitle";
+import useTitle from "../../../../hooks/useTitle";
 import RecentTasks from "./JobTask/RecentTasks/RecentTasks";
 
 const CandidateDashboard = () => {

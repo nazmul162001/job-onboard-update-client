@@ -1,7 +1,7 @@
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
-import useTitle from "../../../Hooks/useTitle";
-import Loading from "../../../Components/Loading/Loading";
+import useTitle from "../../../hooks/useTitle";
+import Loading from "../../../components/Loading/Loading";
 import HrRow from "./HrRow";
 import { BASE_API } from "../../../config";
 

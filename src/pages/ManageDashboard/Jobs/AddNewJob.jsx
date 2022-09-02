@@ -6,8 +6,8 @@ import auth from '../../../Auth/Firebase/Firebase.init';
 import { BASE_API } from '../../../config';
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
-import useTitle from '../../../Hooks/useTitle';
-import useCandidateInfo from '../../../Hooks/useCandidateInfo';
+import useTitle from '../../../hooks/useTitle';
+import useCandidateInfo from '../../../hooks/useCandidateInfo';
 
 
 const AddNewJob = () => {

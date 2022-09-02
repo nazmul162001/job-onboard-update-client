@@ -5,46 +5,45 @@ import "./App.css";
 import RequireAdmin from "./Auth/RequireAdmin/RequireAdmin";
 import RequireAuth from "./Auth/RequireAuth/RequireAuth";
 import RequireHr from "./Auth/RequireHr/RequireHr";
-import ScrollButton from "./Components/ScrollButton/ScrollButton";
-import useImage from "./Hooks/useImage";
-import AboutUs from "./Pages/AboutUs/AboutUs";
-import Login from "./Pages/Authentication/Login/Login";
-import ResetPassword from "./Pages/Authentication/ResetPassword/ResetPassword";
-import SignUp from "./Pages/Authentication/SignUp/SignUp";
-import SignUpForHrManager from "./Pages/Authentication/SignUpForHrManager/SignUpForHrManager";
-import Blog from "./Pages/Blog/Blog";
-import BlogsDetail from "./Pages/Blog/BlogsDetail";
-import Contact from "./Pages/ContactUs/Contact";
-import ApplicantTracking from "./Pages/Features/ApplicantTracking/ApplicantTracking";
-import Home from "./Pages/Home/Home/Home";
-import AllJob from "./Pages/Jobs/AllJob/AllJob";
-import JobDescription from "./Pages/Jobs/JobDescription/JobDescription";
-import AppliedJobs from "./Pages/ManageDashboard/AppliedJobs/AppliedJobs";
-import Candidates from "./Pages/ManageDashboard/Candidates/Candidates";
-import SingleCandidates from "./Pages/ManageDashboard/Candidates/SingleCandidates";
+import ScrollButton from "./components/ScrollButton/ScrollButton";
+import useImage from "./hooks/useImage";
+import AboutUs from "./pages/AboutUs/AboutUs";
+import ApplicantTracking from "./pages/ApplicantTracking/ApplicantTracking";
+import Login from "./pages/Authentication/Login/Login";
+import ResetPassword from "./pages/Authentication/ResetPassword/ResetPassword";
+import SignUp from "./pages/Authentication/SignUp/SignUp";
+import SignUpForHrManager from "./pages/Authentication/SignUpForHrManager/SignUpForHrManager";
+import Blog from "./pages/Blog/Blog";
+import BlogsDetail from "./pages/Blog/BlogsDetail";
+import Contact from "./pages/ContactUs/Contact";
+import Home from "./pages/Home/Home/Home";
+import AllJob from "./pages/Jobs/AllJob/AllJob";
+import JobDescription from "./pages/Jobs/JobDescription/JobDescription";
+import AppliedJobs from "./pages/ManageDashboard/AppliedJobs/AppliedJobs";
+import Candidates from "./pages/ManageDashboard/Candidates/Candidates";
+import SingleCandidates from "./pages/ManageDashboard/Candidates/SingleCandidates";
 
-import CompanyDetails from "./Pages/ManageDashboard/CompanyDetails/CompanyDetails";
-import Dashboard from "./Pages/ManageDashboard/Dashboard/Dashboard";
-import EmployeeDetails from "./Pages/ManageDashboard/EmployeeRoot/EmployeeDetails";
-import EmployeesRoot from "./Pages/ManageDashboard/EmployeeRoot/EmployeesRoot";
-import HrJob from "./Pages/ManageDashboard/HrJob/HrJob";
-import Inbox from "./Pages/ManageDashboard/Inbox/Inbox";
-import AddNewJob from "./Pages/ManageDashboard/Jobs/AddNewJob";
-import ManageAllJobs from "./Pages/ManageDashboard/ManageAllJobs/ManageAllJobs";
-import AllHr from "./Pages/ManageDashboard/ManageHr/AllHr";
-import Profile from "./Pages/ManageDashboard/Profile/Profile";
-import Recruitment from "./Pages/ManageDashboard/Recruitment/Recruitment";
-import SendMailCandidates from "./Pages/ManageDashboard/Recruitment/SendMailCandidates";
-import SingleJobCandidates from "./Pages/ManageDashboard/Recruitment/SingleJobCandidates/SingleJobCandidates";
-import ViewSubmission from "./Pages/ManageDashboard/Recruitment/SingleJobCandidates/ViewSubmission/ViewSubmission";
-import JobTask from "./Pages/ManageDashboard/WelcomeDashboard/CandidateDashboard/JobTask/JobTask";
-import TaskDetais from "./Pages/ManageDashboard/WelcomeDashboard/CandidateDashboard/JobTask/TaskDetais";
-import AllRecentApplicants from "./Pages/ManageDashboard/WelcomeDashboard/HrDashboard/AllRecentApplicants/AllRecentApplicants";
-import WelcomeDashboard from "./Pages/ManageDashboard/WelcomeDashboard/WelcomeDashboard";
-import Pricing from "./Pages/PaymentSystem/Pricing/Pricing";
+import CompanyDetails from "./pages/ManageDashboard/CompanyDetails/CompanyDetails";
+import Dashboard from "./pages/ManageDashboard/Dashboard/Dashboard";
+import EmployeeDetails from "./pages/ManageDashboard/EmployeeRoot/EmployeeDetails";
+import EmployeesRoot from "./pages/ManageDashboard/EmployeeRoot/EmployeesRoot";
+import HrJob from "./pages/ManageDashboard/HrJob/HrJob";
+import Inbox from "./pages/ManageDashboard/Inbox/Inbox";
+import AddNewJob from "./pages/ManageDashboard/Jobs/AddNewJob";
+import ManageAllJobs from "./pages/ManageDashboard/ManageAllJobs/ManageAllJobs";
+import AllHr from "./pages/ManageDashboard/ManageHr/AllHr";
+import Profile from "./pages/ManageDashboard/Profile/Profile";
+import Recruitment from "./pages/ManageDashboard/Recruitment/Recruitment";
+import SendMailCandidates from "./pages/ManageDashboard/Recruitment/SendMailCandidates";
+import SingleJobCandidates from "./pages/ManageDashboard/Recruitment/SingleJobCandidates/SingleJobCandidates";
+import ViewSubmission from "./pages/ManageDashboard/Recruitment/SingleJobCandidates/ViewSubmission/ViewSubmission";
+import JobTask from "./pages/ManageDashboard/WelcomeDashboard/CandidateDashboard/JobTask/JobTask";
+import TaskDetais from "./pages/ManageDashboard/WelcomeDashboard/CandidateDashboard/JobTask/TaskDetais";
+import AllRecentApplicants from "./pages/ManageDashboard/WelcomeDashboard/HrDashboard/AllRecentApplicants/AllRecentApplicants";
+import WelcomeDashboard from "./pages/ManageDashboard/WelcomeDashboard/WelcomeDashboard";
+import Pricing from "./pages/PaymentSystem/Pricing/Pricing";
 import Navbar from "./Shared/Navbar/Navbar";
 import NotFound from "./Shared/NotFound/NotFound";
-import SupportAdmin from "./Shared/Support/SupportAdmin";
 
 export const InitializeContext = createContext(null);
 
@@ -88,7 +87,6 @@ function App() {
           <Route path="/signUp" element={<SignUp />} />
           <Route path="/signUp/hr" element={<SignUpForHrManager />} />
           <Route path="/resetPassword" element={<ResetPassword />} />
-          <Route path="/support" element={<SupportAdmin />} />
           <Route
             path="/dashboard"
             element={

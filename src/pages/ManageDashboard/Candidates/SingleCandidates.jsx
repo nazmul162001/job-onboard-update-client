@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import React from "react";
 import { useParams } from "react-router-dom";
-import Loading from "../../../Components/Loading/Loading";
+import Loading from "../../../components/Loading/Loading";
 import { BASE_API } from "../../../config";
 import { FaUser } from "react-icons/fa";
 import { BiMessageSquareDetail } from "react-icons/bi";

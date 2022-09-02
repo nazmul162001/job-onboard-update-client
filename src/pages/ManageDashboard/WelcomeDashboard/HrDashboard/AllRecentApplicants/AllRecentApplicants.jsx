@@ -1,7 +1,7 @@
 import React from "react";
 import { ImArrowLeft2 } from "react-icons/im";
 import { useNavigate } from "react-router-dom";
-import useCandidate from "../../../../../Hooks/useCandidate";
+import useCandidate from "../../../../../hooks/useCandidate";
 
 const AllRecentApplicants = () => {
   const { getApplicants } = useCandidate();

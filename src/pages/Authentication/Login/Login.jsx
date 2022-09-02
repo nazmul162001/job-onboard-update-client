@@ -7,11 +7,11 @@ import {
 import { useForm } from "react-hook-form";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
-import Loading from "../../../Components/Loading/Loading";
+import Loading from "../../../components/Loading/Loading";
 import { toast } from "react-hot-toast";
 import auth from "../../../Auth/Firebase/Firebase.init";
-import useToken from "../../../Hooks/useToken";
-import useTitle from "../../../Hooks/useTitle";
+import useToken from "../../../hooks/useToken";
+import useTitle from "../../../hooks/useTitle";
 
 const Login = () => {
   useTitle("Login");

@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { BASE_API } from '../../../config';
-import useTitle from '../../../Hooks/useTitle';
+import useTitle from '../../../hooks/useTitle';
 import Jobs from '../Jobs';
 import Sidebar from '../Sidebar/Sidebar';
 

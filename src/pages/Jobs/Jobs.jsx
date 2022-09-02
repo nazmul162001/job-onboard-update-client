@@ -1,5 +1,5 @@
 import React from 'react';
-import EmptyJob from '../../Components/EmptyJob/EmptyJob';
+import EmptyJob from '../../components/EmptyJob/EmptyJob';
 import Job from './Job';
 import Pagination from './Pagination/Pagination';
 
