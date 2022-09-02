@@ -199,12 +199,12 @@ const Footer = () => {
                       gradientTransform="matrix(1 0 0 -1 0 -640.35)"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop offset="0" stop-color="#4997d2" />
-                      <stop offset=".01" stop-color="#4a98d3" />
-                      <stop offset=".26" stop-color="#45b9ea" />
-                      <stop offset=".51" stop-color="#44c6f0" />
-                      <stop offset=".76" stop-color="#57c8e8" />
-                      <stop offset="1" stop-color="#5dc9e6" />
+                      <stop offset="0" stopColor="#4997d2" />
+                      <stop offset=".01" stopColor="#4a98d3" />
+                      <stop offset=".26" stopColor="#45b9ea" />
+                      <stop offset=".51" stopColor="#44c6f0" />
+                      <stop offset=".76" stopColor="#57c8e8" />
+                      <stop offset="1" stopColor="#5dc9e6" />
                     </linearGradient>
                     <linearGradient
                       id="playstore-badge-b"
@@ -215,10 +215,10 @@ const Footer = () => {
                       gradientTransform="matrix(1 0 0 -1 0 -640.35)"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop offset="0" stop-color="#fcdf00" />
-                      <stop offset=".41" stop-color="#fbbc16" />
-                      <stop offset=".78" stop-color="#f9a41b" />
-                      <stop offset="1" stop-color="#f89a1f" />
+                      <stop offset="0" stopColor="#fcdf00" />
+                      <stop offset=".41" stopColor="#fbbc16" />
+                      <stop offset=".78" stopColor="#f9a41b" />
+                      <stop offset="1" stopColor="#f89a1f" />
                     </linearGradient>
                     <linearGradient
                       id="playstore-badge-c"
@@ -229,8 +229,8 @@ const Footer = () => {
                       gradientTransform="matrix(1 0 0 -1 0 -640.35)"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop offset="0" stop-color="#ee414a" />
-                      <stop offset="1" stop-color="#c21e63" />
+                      <stop offset="0" stopColor="#ee414a" />
+                      <stop offset="1" stopColor="#c21e63" />
                     </linearGradient>
                     <linearGradient
                       id="playstore-badge-d"
@@ -241,11 +241,11 @@ const Footer = () => {
                       gradientTransform="matrix(1 0 0 -1 0 -640.35)"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop offset="0" stop-color="#309f73" />
-                      <stop offset=".07" stop-color="#2ba672" />
-                      <stop offset=".48" stop-color="#4cb970" />
-                      <stop offset=".8" stop-color="#60bc6b" />
-                      <stop offset="1" stop-color="#66be6b" />
+                      <stop offset="0" stopColor="#309f73" />
+                      <stop offset=".07" stopColor="#2ba672" />
+                      <stop offset=".48" stopColor="#4cb970" />
+                      <stop offset=".8" stopColor="#60bc6b" />
+                      <stop offset="1" stopColor="#66be6b" />
                     </linearGradient>
                   </defs>
                   <g data-name="Layer 2">
@@ -259,8 +259,8 @@ const Footer = () => {
                         d="M24.05 6.13a1.37 1.37 0 01-.37 1 1.48 1.48 0 01-1.13.46A1.57 1.57 0 0121 6a1.57 1.57 0 011.58-1.59 1.38 1.38 0 01.63.14 1.32 1.32 0 01.48.33l-.26.27a1 1 0 00-.83-.36 1.09 1.09 0 00-.83.33 1.19 1.19 0 00-.35.88 1.2 1.2 0 00.35.89 1.09 1.09 0 00.83.33 1.14 1.14 0 00.85-.33 1 1 0 00.26-.62h-1.14v-.36H24v.22zm2.34-1.28H25v1h1.25v.36H25v1h1.39v.38h-1.78v-3h1.78zM28 7.53h-.39V4.85h-.81v-.37h2.08v.37H28v2.68zm2.36 0v-3h.38v3zm2.12 0h-.38V4.85h-.86v-.37h2.09v.37h-.86v2.68zm4.82-.4a1.46 1.46 0 01-1.11.45 1.47 1.47 0 01-1.11-.45 1.66 1.66 0 010-2.25 1.47 1.47 0 011.11-.45 1.5 1.5 0 011.11.46A1.58 1.58 0 0137.8 6a1.64 1.64 0 01-.46 1.13zm-2-.26a1.11 1.11 0 00.83.35 1.13 1.13 0 00.83-.35 1.15 1.15 0 00.42-.87 1.18 1.18 0 00-.33-.87 1.16 1.16 0 00-.83-.34 1.14 1.14 0 00-.83.34 1.19 1.19 0 00-.34.87 1.2 1.2 0 00.34.87zm2.94.66v-3h.48l1.58 2.32h0V4.48h.39v3h-.4L38.72 5h0v2.53z"
                         fill="#fff"
                         stroke="#fff"
-                        stroke-miterlimit="10"
-                        stroke-width=".2"
+                        strokeMiterlimit="10"
+                        strokeWidth=".2"
                       />
                       <path
                         d="M34.56 12a2.16 2.16 0 102.17 2.16A2.13 2.13 0 0034.56 12zm0 3.47a1.32 1.32 0 111.22-1.31 1.25 1.25 0 01-1.22 1.27zM29.83 12A2.16 2.16 0 1032 14.12 2.13 2.13 0 0029.83 12zm0 3.47a1.32 1.32 0 111.22-1.31 1.25 1.25 0 01-1.22 1.27zm-5.62-2.8v.91h2.2a1.92 1.92 0 01-.5 1.15 2.22 2.22 0 01-1.68.67 2.44 2.44 0 010-4.87 2.3 2.3 0 011.64.65l.64-.64a3.18 3.18 0 00-2.3-.92 3.35 3.35 0 100 6.69 3 3 0 002.34-.94 3 3 0 00.79-2.14 2.47 2.47 0 00-.05-.57zm23 .71A2 2 0 0045.35 12a2.05 2.05 0 00-2 2.16 2.11 2.11 0 002.14 2.15 2.14 2.14 0 001.8-.95l-.74-.5a1.2 1.2 0 01-1.06.61 1.08 1.08 0 01-1-.66l2.89-1.19zm-2.93.72a1.19 1.19 0 011.13-1.26.85.85 0 01.8.46zm-2.35 2.09h1V9.81h-1zm-1.56-3.71a1.52 1.52 0 00-1.18-.48 2.16 2.16 0 000 4.32 1.47 1.47 0 001.14-.49v.31c0 .83-.44 1.27-1.15 1.27a1.21 1.21 0 01-1.08-.76l-.83.34a2 2 0 001.91 1.27 2 2 0 002-2.24v-3.91h-.9zm-1.08 3a1.31 1.31 0 010-2.61 1.22 1.22 0 011.15 1.31 1.21 1.21 0 01-1.17 1.25zm12.35-5.67h-2.27v6.34h1v-2.4h1.32a2 2 0 100-3.94zm0 3.06h-1.33V10.7h1.35a1.09 1.09 0 110 2.17zm5.87-.87a1.77 1.77 0 00-1.68 1l.84.35a1 1 0 011.86.34v.07a2.21 2.21 0 00-1-.24c-.91 0-1.83.49-1.83 1.43a1.45 1.45 0 001.58 1.39 1.31 1.31 0 001.2-.61v.49h.91v-2.49A1.73 1.73 0 0057.51 12zm-.12 3.47c-.31 0-.73-.16-.73-.54s.53-.68 1-.68a1.74 1.74 0 01.87.21 1.17 1.17 0 01-1.14.97zm5.37-3.34l-1.08 2.75-1.13-2.75h-1l1.68 3.85-1 2.14h1l2.6-6zm-8.51 4.06h1V9.81h-1z"

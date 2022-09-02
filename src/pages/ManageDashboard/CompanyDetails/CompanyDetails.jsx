@@ -97,7 +97,7 @@ const CompanyDetails = () => {
         <div className="shadow-xl border-r-4 border-primary rounded-lg relative p-4 order-1">
           <h2 className="text-xl mb-4 px-4 font-bold">Information</h2>
           <label
-            for="editCompanyInfo"
+            htmlFor="editCompanyInfo"
             className="btn btn-sm btn-circle absolute right-2 top-2"
             onClick={() =>
               setEditCompanyInfo({
@@ -191,7 +191,7 @@ const CompanyDetails = () => {
           <div className="modal">
             <div className="modal-box relative w-10/12 max-w-3xl">
               <label
-                for="editCompanyInfo"
+                htmlFor="editCompanyInfo"
                 className="btn btn-sm btn-circle absolute right-2 top-2"
               >
                 ✕

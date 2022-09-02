@@ -1,11 +1,18 @@
 import React from 'react';
 import pricingBg from '../../Assets/images/pricing/pattern.svg'
 import Footer from '../../../Shared/Footer/Footer'
-import { CToast, CToastBody, CToastClose } from '@coreui/react';
+import { useNavigate } from 'react-router-dom';
 
 const Pricing = () => {
+  const navigate = useNavigate() 
+
+  const pricingNavigate = () => {
+    navigate('/signUp/hr')
+  }
+
+
   return (
-    <section className=''>
+    <section className='container mx-auto px-5'>
       <div className="Pricing_header w-full flex justify-center items-center">
         <div className='pt-8 md:pt-28 pb-5 text-center'>
           <h1 className='text-xl md:text-4xl lg:text-5xl px-12 md:px-16 lg:px-24 text-black font-bold '>Smart, affordable HR software. For every growing business.</h1>
@@ -41,7 +48,7 @@ const Pricing = () => {
             <li className='my-2 text-center text-gray-500'> <span className='text-gray-500 line-through'>Screening Questions</span> </li>
             <li className='my-2 text-center text-sky-500'> <span className='text-black'>24/7 Support</span> </li>
           </div>
-          <button className="btn bg-[#60CE83] border-none w-full">Sign Up</button>
+          <button onClick={pricingNavigate} className="btn bg-[#60CE83] border-none w-full">Sign Up</button>
         </div>
         {/* StartUp Lifetime  */}
         <div className="our_pricing p-3 border-2 border-transparent">
@@ -63,7 +70,7 @@ const Pricing = () => {
             <li className='my-2 text-center text-gray-500'> <span className='text-gray-500 line-through'>Screening Questions</span> </li>
             <li className='my-2 text-center text-sky-500'> <span className='text-black'>24/7 Support</span> </li>
           </div>
-          <button className="btn bg-[#895AF6] border-none w-full">Sign Up</button>
+          <button onClick={pricingNavigate}  className="btn bg-[#895AF6] border-none w-full">Sign Up</button>
         </div>
         {/* Business Lifetime  */}
         <div className="our_pricing p-3 border-2 border-transparent">
@@ -85,7 +92,7 @@ const Pricing = () => {
             <li className='my-2 text-center text-sky-500'> <span className='text-black'>Screening Questions</span> </li>
             <li className='my-2 text-center text-sky-500'> <span className='text-black'>24/7 Support</span> </li>
           </div>
-          <button className="btn bg-[#895AF6] border-none w-full">Sign Up</button>
+          <button onClick={pricingNavigate} className="btn bg-[#895AF6] border-none w-full">Sign Up</button>
         </div>
       </div>
       <Footer />

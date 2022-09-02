@@ -21,7 +21,7 @@ const ViewSubmission = () => {
   );
 
   const submissionData = data?.data
-  console.log(submissionData)
+  // console.log(submissionData)
 
 
   if (isLoading) {

@@ -100,7 +100,7 @@ const HrJobRow = ({ job, index, refetch, isLoading }) => {
         <td>{job?.location}</td>
         <td className="flex justify-evenly">
           <label
-            for="editJobs"
+            htmlFor="editJobs"
             className="btn btn-sm btn-circle "
             onClick={() =>
               setEditJobs({
@@ -126,7 +126,7 @@ const HrJobRow = ({ job, index, refetch, isLoading }) => {
           <div className="modal modal-bottom sm:modal-middle">
             <div className="modal-box relative">
               <label
-                for="editJobs"
+                htmlFor="editJobs"
                 className="btn btn-sm btn-circle absolute right-2 top-2"
               >
                 ✕

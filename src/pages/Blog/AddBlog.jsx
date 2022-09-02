@@ -51,7 +51,7 @@ const AddBlog = ({ refetch }) => {
     <div>
       <div className="">
         <label
-          for="add-blog-modal"
+          htmlFor="add-blog-modal"
           className="mr-5 flex items-center bg-base-300 py-2 px-3 rounded-md font-bold cursor-pointer"
         >
           <BsPersonPlusFill />
@@ -60,10 +60,10 @@ const AddBlog = ({ refetch }) => {
       </div>
 
       <input type="checkbox" id="add-blog-modal" className="modal-toggle" />
-      <label for="add-blog-modal" className="modal cursor-pointer modalContainer">
-        <label className="modal-box relative " for="">
+      <label htmlFor="add-blog-modal" className="modal cursor-pointer modalContainer">
+        <label className="modal-box relative " htmlFor="">
           <label
-            for="add-blog-modal"
+            htmlFor="add-blog-modal"
             className="btn btn-sm btn-circle absolute right-2 top-2"
           >
             ✕

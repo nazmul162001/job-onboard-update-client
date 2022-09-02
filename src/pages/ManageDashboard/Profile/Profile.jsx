@@ -100,7 +100,7 @@ const Profile = () => {
         <div className="shadow-xl border-l-4 border-primary rounded-lg relative p-4 order-1 my-8 md:my-0">
           <h2 className="text-xl mb-4 px-4 font-bold">Your Information</h2>
           <label
-            for="editProfile"
+            htmlFor="editProfile"
             className="btn btn-sm btn-circle absolute right-2 top-2"
             onClick={() =>
               setEditProfile({
@@ -239,7 +239,7 @@ const Profile = () => {
           <div className="modal">
             <div className="modal-box relative w-10/12 max-w-3xl">
               <label
-                for="editProfile"
+                htmlFor="editProfile"
                 className="btn btn-sm btn-circle absolute right-2 top-2"
               >
                 ✕

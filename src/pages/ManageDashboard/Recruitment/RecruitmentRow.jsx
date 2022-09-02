@@ -135,12 +135,11 @@ const RecruitmentRow = ({
         <td className="text-sm font-normal px-6 py-4 text-center whitespace-nowrap">
           <label
             onClick={() => setApplicantData(applicant)}
-            for="task-modal"
-            className={`${
-              status
+            htmlFor="task-modal"
+            className={`${status
                 ? "hidden"
                 : "btn btn-outline btn-xs cursor-pointer capitalize"
-            }`}
+              }`}
           >
             Send Task
           </label>

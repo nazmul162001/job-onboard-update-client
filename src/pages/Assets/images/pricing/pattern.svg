@@ -1,45 +1,45 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="250" viewBox="0 0 1440 250">
   <defs>
     <linearGradient id="linear-gradient" x1="0.5" y1="0.198" x2="0.5" y2="1.264" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#fff"/>
-      <stop offset="0.611" stop-color="#e8e8e8"/>
-      <stop offset="1" stop-color="#d4d4d4"/>
+      <stop offset="0" stopColor="#fff"/>
+      <stop offset="0.611" stopColor="#e8e8e8"/>
+      <stop offset="1" stopColor="#d4d4d4"/>
     </linearGradient>
     <linearGradient id="linear-gradient-2" x1="1.051" y1="0.535" x2="0.563" y2="0.476" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
-      <stop offset="1" stop-color="#101624"/>
+      <stop offset="0" stopColor="#fff" stop-opacity="0"/>
+      <stop offset="1" stopColor="#101624"/>
     </linearGradient>
     <linearGradient id="linear-gradient-3" x1="1.051" y1="0.535" x2="0.563" y2="0.476" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
-      <stop offset="1" stop-color="#101624" stop-opacity="0.4"/>
+      <stop offset="0" stopColor="#fff" stop-opacity="0"/>
+      <stop offset="1" stopColor="#101624" stop-opacity="0.4"/>
     </linearGradient>
     <linearGradient id="linear-gradient-4" x1="0.924" y1="0.549" x2="0.612" y2="0.434" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#c7c7c7" stop-opacity="0.149"/>
-      <stop offset="1" stop-color="#101624" stop-opacity="0.388"/>
+      <stop offset="0" stopColor="#c7c7c7" stop-opacity="0.149"/>
+      <stop offset="1" stopColor="#101624" stop-opacity="0.388"/>
     </linearGradient>
     <linearGradient id="linear-gradient-6" x1="1.051" y1="0.625" x2="0.325" y2="0.593" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#c7c7c7" stop-opacity="0.329"/>
-      <stop offset="1" stop-color="#646464"/>
+      <stop offset="0" stopColor="#c7c7c7" stop-opacity="0.329"/>
+      <stop offset="1" stopColor="#646464"/>
     </linearGradient>
     <linearGradient id="linear-gradient-7" x1="0.989" y1="0.404" x2="0.151" y2="0.303" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#c7c7c7" stop-opacity="0.071"/>
-      <stop offset="1" stop-color="#646464"/>
+      <stop offset="0" stopColor="#c7c7c7" stop-opacity="0.071"/>
+      <stop offset="1" stopColor="#646464"/>
     </linearGradient>
     <linearGradient id="linear-gradient-8" x1="1.04" y1="0.5" x2="-0.084" y2="-0.038" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#c7c7c7" stop-opacity="0.2"/>
-      <stop offset="1" stop-color="#646464"/>
+      <stop offset="0" stopColor="#c7c7c7" stop-opacity="0.2"/>
+      <stop offset="1" stopColor="#646464"/>
     </linearGradient>
     <linearGradient id="linear-gradient-9" x1="0.971" y1="0.104" x2="0.24" y2="0.441" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#101624" stop-opacity="0.051"/>
-      <stop offset="1" stop-color="#101624" stop-opacity="0.251"/>
+      <stop offset="0" stopColor="#101624" stop-opacity="0.051"/>
+      <stop offset="1" stopColor="#101624" stop-opacity="0.251"/>
     </linearGradient>
     <linearGradient id="linear-gradient-10" x1="0.979" y1="0.476" x2="0.749" y2="0.378" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#fff" stop-opacity="0.941"/>
-      <stop offset="1" stop-color="#646464" stop-opacity="0.361"/>
+      <stop offset="0" stopColor="#fff" stop-opacity="0.941"/>
+      <stop offset="1" stopColor="#646464" stop-opacity="0.361"/>
     </linearGradient>
     <linearGradient id="linear-gradient-11" x1="0.981" y1="0.135" x2="0.519" y2="0.443" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#fff" stop-opacity="0.2"/>
-      <stop offset="1" stop-color="#101624" stop-opacity="0.18"/>
+      <stop offset="0" stopColor="#fff" stop-opacity="0.2"/>
+      <stop offset="1" stopColor="#101624" stop-opacity="0.18"/>
     </linearGradient>
     <clipPath id="clip-new">
       <rect width="1440" height="250"/>

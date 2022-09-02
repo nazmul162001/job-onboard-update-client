@@ -65,13 +65,13 @@ const SubmitTaskModal = ({ singleTask }) => {
   return (
     <div>
       <input type="checkbox" id="submit_task_modal" className="modal-toggle" />
-      <label for="submit_task_modal" className="modal cursor-pointer">
+      <label htmlFor="submit_task_modal" className="modal cursor-pointer">
         <label
           className="modal-box relative lg:w-10/12 lg:max-w-2xl modalContainer"
-          for=""
+          htmlFor=""
         >
           <label
-            for="submit_task_modal"
+            htmlFor="submit_task_modal"
             className="btn btn-sm btn-circle absolute right-2 top-2"
           >
             ✕
@@ -201,13 +201,13 @@ const SubmitTaskModal = ({ singleTask }) => {
               </div>
 
               <button className="rounded-lg text-lg py-1  font-bold  bg-primary w-full  flex items-center justify-center  text-white">
-                Complete 
+                Complete
               </button>
             </form>
           </div>
         </label>
       </label>
-      <label for="submit_task_modal">
+      <label htmlFor="submit_task_modal">
         <button className="seeTaskDetails ">
           <div className="svg-wrapper-1">
             <div className="svg-wrapper">
