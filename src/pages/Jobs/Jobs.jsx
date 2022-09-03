@@ -1,10 +1,15 @@
 import React from 'react';
 import EmptyJob from '../../components/EmptyJob/EmptyJob';
+import Loading from '../../components/Loading/Loading';
 import Job from './Job';
 import Pagination from './Pagination/Pagination';
 
-const Jobs = ({ getJobs, lastPage, page, pageHandle }) => {
+const Jobs = ({ getJobs, lastPage, page, pageHandle, isLoading }) => {
 
+  if(isLoading){
+    return <Loading/>
+  }
+  
   return (
     <div>
       <div className='flex justify-between items-center'>
