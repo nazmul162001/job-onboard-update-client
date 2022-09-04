@@ -3,6 +3,7 @@
 ## Developed by: <a href="https://github.com/EmtiazHossainE2" target="_blank">Emtiaz</a>, <a href="https://github.com/nazmul162001" target="_blank">Nazmul</a>, <a href="https://github.com/Sajalhowlader" target="_blank">Sajal</a>, <a href="https://github.com/kiron0" target="_blank">Kiron</a>. <br> <br>
 
 ## Project URL – <a href="https://job-on-board-client.vercel.app/" rel="noopener" target="_blank">Job OnBoard</a>
+#### Hr Credential : endgame@gmail.com   Password : 12345678
 
 ---
 
