@@ -10,11 +10,13 @@ import Fade from "react-reveal/Fade";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../Auth/Firebase/Firebase.init";
 import Loading from "../../../components/Loading/Loading";
+import usePasswordToggle from "../../../hooks/usePasswordToggle";
 import useTitle from "../../../hooks/useTitle";
 import useToken from "../../../hooks/useToken";
 
 const Login = () => {
   useTitle("Login");
+  const [passwordTogle, type, icon] = usePasswordToggle();
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
   const {
     register,
@@ -145,21 +147,29 @@ const Login = () => {
                         <label className="label">
                           <span className="label-text">Password</span>
                         </label>
-                        <input
-                          type="password"
-                          placeholder="Password"
-                          className="input input-bordered w-full max-w-md"
-                          {...register("password", {
-                            required: {
-                              value: true,
-                              message: "Password is Required",
-                            },
-                            minLength: {
-                              value: 6,
-                              message: "Must be 6 characters or longer",
-                            },
-                          })}
-                        />
+                        <div className="flex items-center relative">
+                          <input
+                            type={type}
+                            placeholder="Password"
+                            className="input input-bordered w-full max-w-md"
+                            {...register("password", {
+                              required: {
+                                value: true,
+                                message: "Password is Required",
+                              },
+                              minLength: {
+                                value: 6,
+                                message: "Must be 6 characters or longer",
+                              },
+                            })}
+                          />
+                          <span
+                            onClick={passwordTogle}
+                            className="absolute right-3 cursor-pointer text-xl"
+                          >
+                            {icon}
+                          </span>
+                        </div>
                         <label className="label">
                           {errors.password?.type === "required" && (
                             <span className="label-text-alt text-red-500">
