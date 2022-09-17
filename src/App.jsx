@@ -41,6 +41,7 @@ import JobTask from "./pages/ManageDashboard/WelcomeDashboard/CandidateDashboard
 import TaskDetails from "./pages/ManageDashboard/WelcomeDashboard/CandidateDashboard/JobTask/TaskDetails";
 import AllRecentApplicants from "./pages/ManageDashboard/WelcomeDashboard/HrDashboard/AllRecentApplicants/AllRecentApplicants";
 import WelcomeDashboard from "./pages/ManageDashboard/WelcomeDashboard/WelcomeDashboard";
+import Payment from "./pages/PaymentSystem/Payment/Payment";
 import Pricing from "./pages/PaymentSystem/Pricing/Pricing";
 import Navbar from "./Shared/Navbar/Navbar";
 import NotFound from "./Shared/NotFound/NotFound";
@@ -83,6 +84,7 @@ function App() {
           <Route path="contact-us" element={<Contact />}></Route>
           <Route path="/about" element={<AboutUs />} />
           <Route path="/pricing" element={<Pricing />} />
+          <Route path="/payment" element={<Payment />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signUp" element={<SignUp />} />
           <Route path="/signUp/hr" element={<SignUpForHrManager />} />
