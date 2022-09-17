@@ -6,19 +6,23 @@ import auth from "../../../../../Auth/Firebase/Firebase.init";
 import { BASE_API } from "../../../../../config";
 
 const SubmitTaskModal = ({ singleTask }) => {
-
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   let today = new Date().toLocaleDateString();
   let times = new Date();
-  let todaysTime = times.getHours() + ":" + times.getMinutes() + ":" + times.getSeconds();
-  const { register, formState: { errors }, handleSubmit } = useForm();
+  let todaysTime =
+    times.getHours() + ":" + times.getMinutes() + ":" + times.getSeconds();
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm();
 
-  const { timeDuration, taskName, hrEmail, taskTime, } = singleTask;
-  const displayName = auth?.currentUser?.displayName
-  const email = auth?.currentUser?.email
-  const applicantId = singleTask?.applicantData?._id
-  const applicantResume = singleTask?.applicantData?.resume
-  const applicantNumber = singleTask?.applicantData?.number
+  const { timeDuration, taskName, hrEmail, taskTime } = singleTask;
+  const displayName = auth?.currentUser?.displayName;
+  const email = auth?.currentUser?.email;
+  const applicantId = singleTask?.applicantData?._id;
+  const applicantResume = singleTask?.applicantData?.resume;
+  const applicantNumber = singleTask?.applicantData?.number;
 
   const submitTask = (data) => {
     const submitedTaskInfo = {
@@ -34,7 +38,7 @@ const SubmitTaskModal = ({ singleTask }) => {
       hrEmail,
       status: true,
     };
-    console.log(submitedTaskInfo)
+    console.log(submitedTaskInfo);
     fetch(`${BASE_API}/submitCandidateTask`, {
       method: "POST",
       headers: {
@@ -51,7 +55,7 @@ const SubmitTaskModal = ({ singleTask }) => {
             icon: "success",
             confirmButtonText: "Okay",
           });
-          navigate('/dashboard/task')
+          navigate("/dashboard/task");
         } else {
           Swal.fire({
             text: `Opps! Please Try Again`,
@@ -81,30 +85,36 @@ const SubmitTaskModal = ({ singleTask }) => {
               onSubmit={handleSubmit(submitTask)}
               className="space-y-2 text-black"
             >
-              <div className='grid grid-cols-1 '>
-                <div className='flex flex-col space-y-1 gap-y-1'>
-                  <label className='text-[15px] pl-2'>Display Name <span className='text-red-500'>*</span></label>
+              <div className="grid grid-cols-1 ">
+                <div className="flex flex-col space-y-1 gap-y-1">
+                  <label className="text-[15px] pl-2">
+                    Display Name <span className="text-red-500">*</span>
+                  </label>
                   <input
                     type="text"
                     defaultValue={auth?.currentUser?.displayName}
                     disabled
-                    className='border rounded-lg py-1 text-lg pl-3 cursor-not-allowed'
+                    className="border rounded-lg py-1 text-lg pl-3 cursor-not-allowed"
                   />
                 </div>
               </div>
 
-              <div className='flex flex-col space-y-1 gap-y-1 py-2'>
-                <label className='text-[15px] pl-2'>Your email <span className='text-red-500'>*</span></label>
+              <div className="flex flex-col space-y-1 gap-y-1 py-2">
+                <label className="text-[15px] pl-2">
+                  Your email <span className="text-red-500">*</span>
+                </label>
                 <input
                   type="email"
                   defaultValue={auth?.currentUser?.email}
                   disabled
-                  className='border rounded-lg py-2 text-lg pl-3 cursor-not-allowed'
+                  className="border rounded-lg py-2 text-lg pl-3 cursor-not-allowed"
                 />
               </div>
 
-              <div className='flex flex-col space-y-1 gap-y-1 '>
-                <label className='text-[15px] pl-2'>Task Name <span className='text-red-500'>*</span></label>
+              <div className="flex flex-col space-y-1 gap-y-1 ">
+                <label className="text-[15px] pl-2">
+                  Task Name <span className="text-red-500">*</span>
+                </label>
                 <input
                   type="text"
                   value={taskName}
@@ -130,38 +140,44 @@ const SubmitTaskModal = ({ singleTask }) => {
                     },
                   })}
                 />
-                <p className="text-[13px] text-red-500 pl-3">{errors.taskInformation?.message}</p>
+                <p className="text-[13px] text-red-500 pl-3">
+                  {errors.taskInformation?.message}
+                </p>
               </div>
 
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
-                <div className='flex flex-col space-y-1 gap-y-1'>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div className="flex flex-col space-y-1 gap-y-1">
                   <input
                     type="text"
-                    placeholder='Live Link'
-                    className='text-black border rounded-lg py-1 text-lg pl-3 hover:border-primary duration-300'
-                    {...register('submitLiveLink', {
+                    placeholder="Live Link"
+                    className="text-black border rounded-lg py-1 text-lg pl-3 hover:border-primary duration-300"
+                    {...register("submitLiveLink", {
                       required: {
                         value: true,
-                        message: 'This field is required'
-                      }
+                        message: "This field is required",
+                      },
                     })}
                   />
-                  <p className='text-[13px] text-red-500 pl-3'>{errors.submitLiveLink?.message}</p>
+                  <p className="text-[13px] text-red-500 pl-3">
+                    {errors.submitLiveLink?.message}
+                  </p>
                 </div>
 
-                <div className='flex flex-col space-y-1 gap-y-1'>
+                <div className="flex flex-col space-y-1 gap-y-1">
                   <input
                     type="text"
-                    placeholder='Github Link'
-                    className='text-[#4e4c4c] border rounded-lg py-1 text-lg pl-3 hover:border-primary duration-300'
-                    {...register('sumitGithubLink', {
+                    placeholder="Github Link"
+                    className="text-[#4e4c4c] border rounded-lg py-1 text-lg pl-3 hover:border-primary duration-300"
+                    {...register("sumitGithubLink", {
                       required: {
                         value: true,
-                        message: 'This field is required'
-                      }
+                        message: "This field is required",
+                      },
                     })}
                   />
-                  <p className='text-[13px] text-red-500 pl-3'>{errors.sumitGithubLink?.message}</p>
+                  <p className="text-[13px] text-red-500 pl-3">
+                    {errors.sumitGithubLink?.message}
+                  </p>
                 </div>
               </div>
 
@@ -207,15 +223,14 @@ const SubmitTaskModal = ({ singleTask }) => {
           </div>
         </label>
       </label>
-      <label htmlFor="submit_task_modal">
-        <button className="seeTaskDetails ">
-          <div className="svg-wrapper-1">
-            <div className="svg-wrapper">
-              <BsCheckCircleFill />
-            </div>
-          </div>
-          <span>Submit</span>
-        </button>
+
+      <label
+        htmlFor="submit_task_modal"
+        className="flex items-center bg-primary py-3 px-7  rounded-md font-bold cursor-pointer"
+      >
+        <BsCheckCircleFill />
+
+        <span className="ml-3">Submit</span>
       </label>
     </div>
   );

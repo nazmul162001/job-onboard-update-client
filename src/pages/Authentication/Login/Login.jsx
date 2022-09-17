@@ -1,17 +1,17 @@
 import React, { useEffect } from "react";
-import Fade from "react-reveal/Fade";
 import {
   useSignInWithEmailAndPassword,
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
-import { Link, useNavigate, useLocation } from "react-router-dom";
-import { FcGoogle } from "react-icons/fc";
-import Loading from "../../../components/Loading/Loading";
 import { toast } from "react-hot-toast";
+import { FcGoogle } from "react-icons/fc";
+import Fade from "react-reveal/Fade";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../Auth/Firebase/Firebase.init";
-import useToken from "../../../hooks/useToken";
+import Loading from "../../../components/Loading/Loading";
 import useTitle from "../../../hooks/useTitle";
+import useToken from "../../../hooks/useToken";
 
 const Login = () => {
   useTitle("Login");
@@ -29,15 +29,14 @@ const Login = () => {
   const location = useLocation();
   let from = location.state?.from?.pathname || "/";
   const [token] = useToken(user || gUser);
-  const search = location.search?.split('=')?.[1]
+  const search = location.search?.split("=")?.[1];
 
   useEffect(() => {
     if (token) {
       if (!search) {
         navigate(from, { replace: true });
-      }
-      else {
-        navigate(search)
+      } else {
+        navigate(search);
       }
       toast.success(
         `Welcome Back, ${auth?.currentUser?.displayName} to Job Onboard!`,
@@ -77,7 +76,8 @@ const Login = () => {
                     Get Discovered by Top Employers and Hire your need
                   </h1>
                   <p className="text-center">
-                    Find experts, post & monitor your circulars through this applicant tracking system
+                    Find experts, post & monitor your circulars through this
+                    applicant tracking system
                   </p>
                 </div>
                 <div className="card w-full max-w-lg lg:bg-base-300 shadow-xl">
@@ -89,7 +89,8 @@ const Login = () => {
                       Don't have an account?{" "}
                       <Link className="text-primary" to="/signUp">
                         Candidate
-                      </Link> or {" "}
+                      </Link>{" "}
+                      or{" "}
                       <Link className="text-primary" to="/signUp/hr">
                         HR Manager
                       </Link>
@@ -126,7 +127,10 @@ const Login = () => {
                         />
                         <label className="label">
                           {errors.email?.type === "required" && (
-                            <span data-testId="error" className="label-text-alt text-red-500">
+                            <span
+                              data-testId="error"
+                              className="label-text-alt text-red-500"
+                            >
                               {errors.email.message}
                             </span>
                           )}
