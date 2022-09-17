@@ -1,6 +1,6 @@
 import React from 'react';
-import openings from '../../Assets/images/applicants-tracking/tracking_icon.svg'
-import engaged from '../../Assets/images/applicants-tracking/engaged.svg'
+import openings from '../Assets/images/applicants-tracking/tracking_icon.svg'
+import engaged from '../Assets/images/applicants-tracking/engaged.svg'
 
 const CandidateEngaged = () => {
   return (

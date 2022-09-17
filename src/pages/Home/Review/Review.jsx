@@ -83,8 +83,9 @@ const Review = () => {
         className="mySwiper"
       >
         <div className="user_reviews">
-          {reviews.map((review) => (
-            <SwiperSlide>
+          {reviews.map((review,index) => (
+            <SwiperSlide
+            key={index}>
               <ReviewInfo review={review} />
             </SwiperSlide>
           ))}

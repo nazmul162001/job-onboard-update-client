@@ -5,7 +5,7 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
 import { BiLogInCircle } from "react-icons/bi";
-import useTitle from "../../../Hooks/useTitle";
+import useTitle from "../../../hooks/useTitle";
 const Inbox = () => {
   useTitle('Mails')
   const form = useRef();

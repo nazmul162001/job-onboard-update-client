@@ -9,10 +9,10 @@ import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
 import ReactTooltip from "react-tooltip";
 import { InitializeContext } from "../../../App";
 import auth from "../../../Auth/Firebase/Firebase.init";
-import Loader from "../../../Components/Loader/Loader";
+import Loader from "../../../components/Loader/Loader";
 import { BASE_API } from "../../../config";
-import useAdmin from "../../../Hooks/useAdmin";
-import useHrManager from "../../../Hooks/useHrManager";
+import useAdmin from "../../../hooks/useAdmin";
+import useHrManager from "../../../hooks/useHrManager";
 import Logo from "../../Assets/logo/logo.png";
 import "./Dashboard.css";
 
@@ -73,12 +73,6 @@ const Dashboard = ({ children }) => {
       path: "/",
     },
     {
-      title: "Profile",
-      src: "ri-user-line",
-      tooltip: "Profile",
-      path: "/profile",
-    },
-    {
       title: "Task",
       src: "ri-task-line",
       tooltip: "Task",
@@ -90,6 +84,12 @@ const Dashboard = ({ children }) => {
       tooltip: "Applied Jobs",
       path: "/appliedJobs",
       gap: false,
+    },
+    {
+      title: "Profile",
+      src: "ri-user-line",
+      tooltip: "Profile",
+      path: "/profile",
     },
   ];
   const MenusAdmin = [

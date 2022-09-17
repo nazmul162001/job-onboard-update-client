@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { BASE_API } from '../../../config';
-import useTitle from '../../../Hooks/useTitle';
+import useTitle from '../../../hooks/useTitle';
 import Jobs from '../Jobs';
 import Sidebar from '../Sidebar/Sidebar';
 
@@ -17,7 +17,7 @@ const AllJob = () => {
   const [search, setSearch] = useState('');
   const [location, setLocation] = useState('');
 
-  const { data } = useQuery(['AllJobs', page, show, cat,  jobType, location, search], () => axios.get(`${BASE_API}/jobs?search=${search}&page=${page}&show=${show}&location=${location}&cat=${cat}&type=${jobType}`))
+  const { data,isLoading } = useQuery(['AllJobs', page, show, cat,  jobType, location, search], () => axios.get(`${BASE_API}/jobs?search=${search}&page=${page}&show=${show}&location=${location}&cat=${cat}&type=${jobType}`))
 
   const jobDataArr = data?.data?.jobs
   const total = data?.data?.total;
@@ -85,7 +85,7 @@ const AllJob = () => {
         </div>
 
         <div className="jobs flex-1 p-8 col-span-12 overflow-y-auto jobsSidBarHidden md:col-start-6 md:col-end-12 lg:col-start-5 lg:col-end-12 ">
-          <Jobs getJobs={getJobs} lastPage={lastPage} page={page} pageHandle={pageHandle}/>
+          <Jobs getJobs={getJobs} isLoading={isLoading} lastPage={lastPage} page={page} pageHandle={pageHandle}/>
         </div>
       </div>
     </div>

@@ -37,7 +37,7 @@ const AllEmployees = ({
               className="mr-2 text-xl cursor-pointer"
             />
 
-            <label for="edit-employee-modal">
+            <label htmlFor="edit-employee-modal">
               <BiEdit
                 onClick={() => setEditEmployeDetails(singleDetails)}
                 className="mr-2 text-xl cursor-pointer"

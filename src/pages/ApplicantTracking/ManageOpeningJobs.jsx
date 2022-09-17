@@ -1,6 +1,6 @@
 import React from 'react';
-import openings from '../../Assets/images/applicants-tracking/tracking_icon.svg'
-import openingBig from '../../Assets/images/applicants-tracking/tracking_big.svg'
+import openings from '../Assets/images/applicants-tracking/tracking_icon.svg'
+import openingBig from '../Assets/images/applicants-tracking/tracking_big.svg'
 
 const ManageOpeningJobs = () => {
   return (

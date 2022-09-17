@@ -5,9 +5,9 @@ import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { FiEdit } from "react-icons/fi";
 import auth from "../../../Auth/Firebase/Firebase.init";
-import Loading from "../../../Components/Loading/Loading";
+import Loading from "../../../components/Loading/Loading";
 import { BASE_API } from "../../../config";
-import useTitle from "../../../Hooks/useTitle";
+import useTitle from "../../../hooks/useTitle";
 
 const CompanyDetails = () => {
   useTitle("Company Info");
@@ -97,7 +97,7 @@ const CompanyDetails = () => {
         <div className="shadow-xl border-r-4 border-primary rounded-lg relative p-4 order-1">
           <h2 className="text-xl mb-4 px-4 font-bold">Information</h2>
           <label
-            for="editCompanyInfo"
+            htmlFor="editCompanyInfo"
             className="btn btn-sm btn-circle absolute right-2 top-2"
             onClick={() =>
               setEditCompanyInfo({
@@ -191,7 +191,7 @@ const CompanyDetails = () => {
           <div className="modal">
             <div className="modal-box relative w-10/12 max-w-3xl">
               <label
-                for="editCompanyInfo"
+                htmlFor="editCompanyInfo"
                 className="btn btn-sm btn-circle absolute right-2 top-2"
               >
                 ✕

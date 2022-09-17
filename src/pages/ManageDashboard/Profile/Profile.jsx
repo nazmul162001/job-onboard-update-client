@@ -3,15 +3,15 @@ import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import auth from "../../../Auth/Firebase/Firebase.init";
-import Loading from "../../../Components/Loading/Loading";
+import Loading from "../../../components/Loading/Loading";
 import { BASE_API } from "../../../config";
-import useTitle from "../../../Hooks/useTitle";
+import useTitle from "../../../hooks/useTitle";
 import { useAuthState } from "react-firebase-hooks/auth";
-import useAdmin from "../../../Hooks/useAdmin";
-import useHrManager from "../../../Hooks/useHrManager";
+import useAdmin from "../../../hooks/useAdmin";
+import useHrManager from "../../../hooks/useHrManager";
 import { FiEdit } from "react-icons/fi";
 import { BsFolderSymlink, BsLink45Deg } from "react-icons/bs";
-import useCandidateInfo from "../../../Hooks/useCandidateInfo";
+import useCandidateInfo from "../../../hooks/useCandidateInfo";
 
 const Profile = () => {
   useTitle("Profile");
@@ -100,7 +100,7 @@ const Profile = () => {
         <div className="shadow-xl border-l-4 border-primary rounded-lg relative p-4 order-1 my-8 md:my-0">
           <h2 className="text-xl mb-4 px-4 font-bold">Your Information</h2>
           <label
-            for="editProfile"
+            htmlFor="editProfile"
             className="btn btn-sm btn-circle absolute right-2 top-2"
             onClick={() =>
               setEditProfile({
@@ -239,7 +239,7 @@ const Profile = () => {
           <div className="modal">
             <div className="modal-box relative w-10/12 max-w-3xl">
               <label
-                for="editProfile"
+                htmlFor="editProfile"
                 className="btn btn-sm btn-circle absolute right-2 top-2"
               >
                 ✕

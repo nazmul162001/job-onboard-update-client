@@ -54,13 +54,13 @@ const AddEmployee = ({ refetch, setEditEmployeDetails }) => {
   return (
     <div className="bg-base-100">
       <input type="checkbox" id="add-new-employee-modal" className="modal-toggle" />
-      <label for="add-new-employee-modal" className="modal cursor-pointer">
+      <label htmlFor="add-new-employee-modal" className="modal cursor-pointer">
         <label
           className="modal-box relative lg:w-10/12 lg:max-w-2xl modalContainer"
-          for=""
+          htmlFor=""
         >
           <label
-            for="add-new-employee-modal"
+            htmlFor="add-new-employee-modal"
             className="btn btn-sm btn-circle absolute right-2 top-2"
           >
             ✕
@@ -405,7 +405,7 @@ const AddEmployee = ({ refetch, setEditEmployeDetails }) => {
 
       <div className="">
         <label
-          for="add-new-employee-modal"
+          htmlFor="add-new-employee-modal"
           className="mr-5 flex items-center bg-base-300 py-2 px-3 rounded-md font-bold cursor-pointer"
         >
           <BsPersonPlusFill /> Add New

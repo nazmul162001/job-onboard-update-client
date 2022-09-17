@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { BsFolderSymlink, BsLink45Deg } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
-import Loading from "../../../Components/Loading/Loading";
-import useTitle from "../../../Hooks/useTitle";
+import Loading from "../../../components/Loading/Loading";
+import useTitle from "../../../hooks/useTitle";
 import moment from 'moment';
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";

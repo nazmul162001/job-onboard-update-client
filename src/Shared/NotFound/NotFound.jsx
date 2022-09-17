@@ -1,5 +1,5 @@
 import React from "react";
-import not_found from "../../Pages/Assets/images/NotFound/404.png";
+import not_found from "../../pages/Assets/images/NotFound/404.png";
 import { Link } from "react-router-dom";
 import { MdOutlineArrowBackIos } from "react-icons/md";
 

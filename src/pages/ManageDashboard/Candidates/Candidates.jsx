@@ -1,14 +1,12 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { useState } from "react";
 import auth from "../../../Auth/Firebase/Firebase.init";
-import Loading from "../../../Components/Loading/Loading";
+import Loading from "../../../components/Loading/Loading";
 import { BASE_API } from "../../../config";
-import useCandidate from "../../../Hooks/useCandidate";
-import useTitle from "../../../Hooks/useTitle";
+import useCandidate from "../../../hooks/useCandidate";
+import useTitle from "../../../hooks/useTitle";
 import Candidate from "./Candidate";
 import "./CandidateCss/Candidate.css";
-import TaskModal from "./TaskModal";
 
 const Candidates = () => {
   useTitle("Candidates");

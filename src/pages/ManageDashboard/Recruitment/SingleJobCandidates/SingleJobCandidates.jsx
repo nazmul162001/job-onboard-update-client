@@ -1,17 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import useAppliedCandidates from "../../../../Hooks/useAppliedCandidates";
-import useJob from "../../../../Hooks/useJob";
+import useAppliedCandidates from "../../../../hooks/useAppliedCandidates";
+import useJob from "../../../../hooks/useJob";
 import RecruitmentRow from "../RecruitmentRow";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { ImArrowLeft2 } from "react-icons/im";
 import * as FileSaver from "file-saver";
 import * as XLSX from "xlsx";
-import DashboardFooter from "../../DashboardFooter/DashboardFooter";
 import TaskModal from "../../Candidates/TaskModal";
-import { useQuery } from "@tanstack/react-query";
-import { BASE_API } from "../../../../config";
-import auth from "../../../../Auth/Firebase/Firebase.init";
 
 const SingleJobCandidates = () => {
   const [applicantData, setApplicantData] = useState(null);

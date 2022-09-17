@@ -5,12 +5,12 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { signOut } from "firebase/auth";
 import { toast } from "react-hot-toast";
 import auth from "../../Auth/Firebase/Firebase.init";
-import logo from "../../Pages/Assets/logo/logo.png";
+import logo from "../../pages/Assets/logo/logo.png";
 import { InitializeContext } from "../../App";
 import { FiLogOut } from "react-icons/fi";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-import useAdmin from "../../Hooks/useAdmin";
-import useHrManager from "../../Hooks/useHrManager";
+import useAdmin from "../../hooks/useAdmin";
+import useHrManager from "../../hooks/useHrManager";
 import { BiLogInCircle } from "react-icons/bi";
 
 const Navbar = () => {

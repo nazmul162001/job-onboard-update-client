@@ -3,7 +3,7 @@ import aboutImg from '../Assets/images/about-img.jpg'
 import { PhoneIcon, ArrowSmRightIcon, CheckIcon } from '@heroicons/react/outline';
 import { ChipIcon, SupportIcon } from '@heroicons/react/solid'
 import Footer from '../../Shared/Footer/Footer';
-import useTitle from '../../Hooks/useTitle';
+import useTitle from '../../hooks/useTitle';
 
 const AboutUs = () => {
     useTitle('About Us')

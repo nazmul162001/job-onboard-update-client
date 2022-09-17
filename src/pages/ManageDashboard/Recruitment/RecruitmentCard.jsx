@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Loading from "../../../Components/Loading/Loading";
-import useAppliedCandidates from "../../../Hooks/useAppliedCandidates";
+import Loading from "../../../components/Loading/Loading";
+import useAppliedCandidates from "../../../hooks/useAppliedCandidates";
 
 const RecruitmentCard = ({ job }) => {
   const navigate = useNavigate();

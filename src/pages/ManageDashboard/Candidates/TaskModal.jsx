@@ -55,13 +55,13 @@ const TaskModal = ({ applicantData, setApplicantData }) => {
   return (
     <div>
       <input type="checkbox" id="task-modal" className="modal-toggle" />
-      <label for="task-modal" className="modal cursor-pointer">
+      <label htmlFor="task-modal" className="modal cursor-pointer">
         <label
           className="modal-box relative lg:w-10/12 lg:max-w-2xl modalContainer"
-          for=""
+          htmlFor=""
         >
           <label
-            for="task-modal"
+            htmlFor="task-modal"
             className="btn btn-sm btn-circle absolute right-2 top-2"
           >
             ✕

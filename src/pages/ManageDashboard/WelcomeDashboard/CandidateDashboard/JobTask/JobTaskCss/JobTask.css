@@ -1,10 +1,9 @@
-/* From uiverse.io by @adamgiebl */
 .seeTaskDetails {
   font-family: inherit;
   font-size: 15px;
   background: #002142f7;
   color: white;
-  padding: 5px 6px;
+  padding: 8px 6px;
   display: flex;
   align-items: center;
   border-radius: 6px;
@@ -43,11 +42,4 @@
 
 .info {
   border-radius: 10px 10px 0px 2px;
-}
-
-submitBtan {
-  background: #87ffe9eb;
-  padding: 8px 15px;
-  color: #2a2a2a;
-  text-transform: uppercase;
 }

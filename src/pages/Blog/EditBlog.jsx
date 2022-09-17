@@ -51,17 +51,17 @@ const EditBlog = ({ singleBlogs, refetch }) => {
     <div>
       <div className="">
         <label
-          for="edit-blog-modal"
+          htmlFor="edit-blog-modal"
           className="font-bold text-2xl text-blue-500 cursor-pointer"
         >
           <BiEdit />
         </label>
       </div>
       <input type="checkbox" id="edit-blog-modal" className="modal-toggle" />
-      <label for="edit-blog-modal" className="modal cursor-pointer modalContainer">
-        <label className="modal-box relative lg:w-10/12 lg:max-w-2xl " for="">
+      <label htmlFor="edit-blog-modal" className="modal cursor-pointer modalContainer">
+        <label className="modal-box relative lg:w-10/12 lg:max-w-2xl " htmlFor="">
           <label
-            for="edit-blog-modal"
+            htmlFor="edit-blog-modal"
             className="btn btn-sm btn-circle absolute right-2 top-2"
           >
             ✕

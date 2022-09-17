@@ -5,11 +5,11 @@ import { ImArrowLeft2 } from "react-icons/im";
 import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import auth from "../../../Auth/Firebase/Firebase.init";
-import Loading from "../../../Components/Loading/Loading";
+import Loading from "../../../components/Loading/Loading";
 import { fetchAppliedJobs } from "../../../Features/AppliedJobs/AppliedJobsSlice";
-import useAdmin from "../../../Hooks/useAdmin";
-import useHrManager from "../../../Hooks/useHrManager";
-import useJob from "../../../Hooks/useJob";
+import useAdmin from "../../../hooks/useAdmin";
+import useHrManager from "../../../hooks/useHrManager";
+import useJob from "../../../hooks/useJob";
 import Footer from "../../../Shared/Footer/Footer";
 import ApplicantModal from "./ApplicantModal";
 const JobDescription = () => {

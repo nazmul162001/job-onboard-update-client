@@ -1,6 +1,6 @@
 import React from 'react';
-import openings from '../../Assets/images/applicants-tracking/tracking_icon.svg'
-import offers from '../../Assets/images/applicants-tracking/makeOffer.svg'
+import openings from '../Assets/images/applicants-tracking/tracking_icon.svg'
+import offers from '../Assets/images/applicants-tracking/makeOffer.svg'
 
 const MakeOffers = () => {
   return (

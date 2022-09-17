@@ -51,8 +51,9 @@ const WhyJobOnboard = () => {
           />
         </div>
         <div className="gap-y-6 flex flex-col justify-center ">
-          {onBoardData.map((button) => (
+          {onBoardData.map((button,index) => (
             <button
+             key={index}
               onClick={() => setImage(button.url)}
               className={`onBoardBtn ${button.url === image && " active"}`}
             >
