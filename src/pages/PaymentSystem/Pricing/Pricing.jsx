@@ -3,19 +3,20 @@ import pricingBg from "../../Assets/images/pricing/pattern.svg";
 import Footer from "../../../Shared/Footer/Footer";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import { BASE_API } from "../../../config";
 
 const Pricing = () => {
   const navigate = useNavigate();
   const [payment, setPayment] = useState([]);
 
-  const pricingNavigate = () => {
+  const pricingNavigate = (paymentId) => {
     // navigate('/signUp/hr')
-    navigate("/payment");
+    navigate(`${paymentId}`);
   };
 
   // get data from json
   useEffect(() => {
-    fetch("payment.json")
+    fetch(`${BASE_API}/makePayment`)
       .then((res) => res.json())
       .then((data) => setPayment(data));
   }, []);
@@ -118,7 +119,7 @@ const Pricing = () => {
             </li>
           </div>
           <button
-            onClick={pricingNavigate}
+           onClick={() => pricingNavigate(payment[0]._id)}
             className="btn bg-[#60CE83] border-none w-full"
           >
             Free
@@ -189,7 +190,7 @@ const Pricing = () => {
             </li>
           </div>
           <button
-            onClick={pricingNavigate}
+             onClick={() => pricingNavigate(payment[1]._id)}
             className="btn bg-[#895AF6] border-none w-full"
           >
             Purchase
@@ -256,7 +257,7 @@ const Pricing = () => {
             </li>
           </div>
           <button
-            onClick={pricingNavigate}
+             onClick={() => pricingNavigate(payment[2]._id)}
             className="btn bg-[#895AF6] border-none w-full"
           >
             Purchase
