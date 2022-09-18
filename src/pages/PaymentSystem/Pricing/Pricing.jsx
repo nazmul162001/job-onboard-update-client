@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import pricingBg from "../../Assets/images/pricing/pattern.svg";
+// import pricingBg from "../../Assets/images/pricing/pattern.svg";
 import Footer from "../../../Shared/Footer/Footer";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
@@ -20,11 +20,14 @@ const Pricing = () => {
       .then((res) => res.json())
       .then((data) => setPayment(data));
   }, []);
-  // console.log(payment[0].price)
+
+  // const priceFreeN = payment[0].price;
+  // console.log(priceFreeN);
 
   const priceFree = payment[0]?.price;
   const priceStandard = payment[1]?.price;
   const priceBusiness = payment[2]?.price;
+  // console.log(priceFree)
 
   return (
     <section className="container mx-auto px-5">
@@ -41,16 +44,16 @@ const Pricing = () => {
           </button>
         </div>
       </div>
-      <div className="w-full h-28">
+      {/* <div className="w-full h-28">
         <img className="" src={pricingBg} alt="" />
-      </div>
+      </div> */}
       {/* toast  */}
 
       {/* pricing section  */}
       <div className="pricing grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 px-8 md:px-14 lg:px-16 my-2">
         {/* Free Pricing */}
         <div className="our_pricing p-3 border-2 border-gray rounded">
-          <h2 className="text-3xl font-bold">Free</h2>
+          <h2 className="text-3xl font-medium">Free</h2>
           <div className="button flex justify-center items-center my-3">
             <button className="px-5 py-3 text-blue-500 rounded-full w-4/5 bg-[#E6ECFF]">
               {" "}
@@ -119,7 +122,7 @@ const Pricing = () => {
             </li>
           </div>
           <button
-           onClick={() => pricingNavigate(payment[0]._id)}
+            onClick={() => pricingNavigate(payment[0]._id)}
             className="btn bg-[#60CE83] border-none w-full"
           >
             Free
@@ -127,7 +130,7 @@ const Pricing = () => {
         </div>
         {/* StartUp Lifetime  */}
         <div className="our_pricing p-3 border-2 border-transparent">
-          <h2 className="text-3xl font-bold">Startup Lifetime</h2>
+          <h2 className="text-3xl font-medium">Startup</h2>
           <div className="button flex justify-center items-center my-3">
             <button className="px-5 py-3 text-blue-500 rounded-full w-4/5 bg-[#E6ECFF]">
               <span className="text-gray-500 line-through">$499.99</span>{" "}
@@ -190,7 +193,7 @@ const Pricing = () => {
             </li>
           </div>
           <button
-             onClick={() => pricingNavigate(payment[1]._id)}
+            onClick={() => pricingNavigate(payment[1]._id)}
             className="btn bg-[#895AF6] border-none w-full"
           >
             Purchase
@@ -198,7 +201,7 @@ const Pricing = () => {
         </div>
         {/* Business Lifetime  */}
         <div className="our_pricing p-3 border-2 border-transparent">
-          <h2 className="text-3xl font-bold">Business Lifetime</h2>
+          <h2 className="text-3xl font-medium">Business</h2>
           <div className="button flex justify-center items-center my-3">
             <button className="px-5 py-3 text-blue-500 rounded-full w-4/5 bg-[#E6ECFF]">
               <span className="text-gray-500 line-through">$999.99</span>{" "}
@@ -257,7 +260,7 @@ const Pricing = () => {
             </li>
           </div>
           <button
-             onClick={() => pricingNavigate(payment[2]._id)}
+            onClick={() => pricingNavigate(payment[2]._id)}
             className="btn bg-[#895AF6] border-none w-full"
           >
             Purchase

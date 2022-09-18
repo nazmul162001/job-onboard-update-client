@@ -8,6 +8,7 @@ const CheckoutForm = ({ paymentDetails }) => {
   const elements = useElements();
   const [cardError, setCardError] = useState("");
   const [success, setSuccess] = useState("");
+  const [transactionId, setTransactionId] = useState("");
   const [clientSecret, setClientSecret] = useState("");
 
   const { price } = paymentDetails;
@@ -68,10 +69,9 @@ const CheckoutForm = ({ paymentDetails }) => {
       setCardError(intentError?.message);
     } else {
       setCardError("");
-      setSuccess("Congratulation! 🎉 Your Payment is success. ")
-      
+      setTransactionId(paymentIntent.id);
+      setSuccess("Congratulation! 🎉 Your Payment is success. ");
     }
-
   };
 
   return (
@@ -108,7 +108,10 @@ const CheckoutForm = ({ paymentDetails }) => {
         <p className="text-red-500 text-sm text-center">{cardError}</p>
       )}
       {success && (
-        <p className="text-green-500 text-sm text-center">{success}</p>
+        <div>
+          <p className="text-green-500 text-sm text-center">{success}</p>
+          <p className="text-green-500 text-sm text-center font-bold">Your Transaction Id: <span className="text-black opacity-50">{transactionId}</span> </p>
+        </div>
       )}
     </>
   );
