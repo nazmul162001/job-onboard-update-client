@@ -2,15 +2,24 @@ import React, { useState } from "react";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { useEffect } from "react";
 import { BASE_API } from "../../../config";
+import Swal from "sweetalert2";
+import { useAuthState } from "react-firebase-hooks/auth";
+import Loading from "../../../components/Loading/Loading";
+import auth from "../../../Auth/Firebase/Firebase.init";
 
 const CheckoutForm = ({ paymentDetails }) => {
   const stripe = useStripe();
   const elements = useElements();
   const [cardError, setCardError] = useState("");
   const [success, setSuccess] = useState("");
+  const [transactionId, setTransactionId] = useState("");
   const [clientSecret, setClientSecret] = useState("");
+  const [U, isLoading] = useAuthState(auth);
+  
 
   const { price } = paymentDetails;
+
+
 
   useEffect(() => {
     fetch(`${BASE_API}/create-payment-intent`, {
@@ -28,6 +37,10 @@ const CheckoutForm = ({ paymentDetails }) => {
         }
       });
   }, [price]);
+
+  if(isLoading){
+    return <Loading />
+  }
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -64,14 +77,39 @@ const CheckoutForm = ({ paymentDetails }) => {
         },
       });
     // set error
-    if (intentError) {
-      setCardError(intentError?.message);
-    } else {
-      setCardError("");
-      setSuccess("Congratulation! 🎉 Your Payment is success. ")
-      
-    }
+    // if (intentError) {
+    //   setCardError(intentError?.message);
+    // } else {
+    //   setCardError("");
+    //   setTransactionId(paymentIntent.id);
+    //   setSuccess("Congratulation! 🎉 Your Payment is success. ");
+    // }
 
+    if (intentError) {
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-center",
+        showConfirmButton: false,
+        timer: 2000,
+        timerProgressBar: true,
+      });
+
+      Toast.fire({
+        icon: "error",
+        title: intentError?.message,
+      });
+    } else {
+      Swal.fire({
+        title: "Congrats 🎉",
+        text: "Pay successful",
+        showCloseButton: true,
+        confirmButtonColor: "#3085d6",
+        confirmButtonText: "OK",
+        icon: "success",
+        width: "30em",
+        footer: `Transaction Id: ${paymentIntent.id}`,
+      });
+    }
   };
 
   return (
@@ -108,7 +146,13 @@ const CheckoutForm = ({ paymentDetails }) => {
         <p className="text-red-500 text-sm text-center">{cardError}</p>
       )}
       {success && (
-        <p className="text-green-500 text-sm text-center">{success}</p>
+        <div>
+          <p className="text-green-500 text-sm text-center">{success}</p>
+          <p className="text-green-500 text-sm text-center font-bold">
+            Your Transaction Id:{" "}
+            <span className="text-black opacity-50">{transactionId}</span>{" "}
+          </p>
+        </div>
       )}
     </>
   );
