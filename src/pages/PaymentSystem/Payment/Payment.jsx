@@ -67,7 +67,7 @@ const Payment = () => {
           </div>
           <div className="payment-for">
             <Elements stripe={stripePromise}>
-              <CheckoutForm />
+              <CheckoutForm paymentDetails={paymentDetails} />
             </Elements>
           </div>
           {/* <div className="c-actions">
