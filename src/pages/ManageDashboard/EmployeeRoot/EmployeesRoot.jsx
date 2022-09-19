@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useState } from "react";
 import Swal from "sweetalert2";
 import Loading from "../../../components/Loading/Loading";
 import { BASE_API } from "../../../config";
-import { fetchAllEmployeDetails } from "../../../Features/AllEmployeDetails/AllEmployeDetailsSlice";
+import useEmployeeInfo from "../../../hooks/useEmployeeInfo";
 import useTitle from "../../../hooks/useTitle";
 import AddEmployee from "./AddEmployee";
 import AllEmployees from "./AllEmployees";
@@ -12,17 +11,19 @@ import "./EmployeeCss/Employee.css";
 
 const EmployeesRoot = () => {
   useTitle("Employees");
-  // const allEmployeDetails = data?.data;
+  const { data, isLoading, refetch } = useEmployeeInfo();
+  const allEmployeDetails = data?.data;
   const [editEmployeDetails, setEditEmployeDetails] = useState(null);
-  const { isLoading, allEmployeDetails } = useSelector(
-    (state) => state.allEmployeDetails
-  );
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchAllEmployeDetails());
-  }, [dispatch]);
-  // const { data, isLoading, refetch } = useEmployeeInfo();
+  // const { isLoading, allEmployeDetails } = useSelector(
+  //   (state) => state.allEmployeDetails
+  // );
+  // const dispatch = useDispatch();
+  // useEffect(() => {
+  //   dispatch(fetchAllEmployeDetails());
+  // }, [dispatch]);
+
   const deleteEmployeeDetails = (id) => {
+    console.log(id);
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -32,30 +33,18 @@ const EmployeesRoot = () => {
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
-      if (result.isConfirmed && id) {
-        fetch(`${BASE_API}/applicants/${id}`, {
+      if (result.isConfirmed) {
+        fetch(`${BASE_API}/deleteEmployeDetails/${id}`, {
           method: "DELETE",
           headers: {
-            authorization: `Bearer ${localStorage.getItem("accessToken")}`,
             "content-type": "application/json",
           },
         })
           .then((res) => res.json())
           .then((result) => {
-            if (result?.acknowledged) {
-              fetch(`${BASE_API}/deleteEmployeDetails/${id}`, {
-                method: "DELETE",
-                headers: {
-                  "content-type": "application/json",
-                },
-              })
-                .then((res) => res.json())
-                .then((result) => {
-                  if (result?.deletedCount) {
-                    Swal.fire("Deleted!", "Delete Successfully.", "success");
-                    // refetch();
-                  }
-                });
+            if (result?.deletedCount) {
+              Swal.fire("Deleted!", "Delete Successfully.", "success");
+              refetch();
             }
           });
       }
@@ -79,7 +68,7 @@ const EmployeesRoot = () => {
           <span>You can manage all the employees and see there details.</span>
         </div>
         <AddEmployee
-          // refetch={refetch}
+          refetch={refetch}
           setEditEmployeDetails={setEditEmployeDetails}
         />
       </div>
@@ -115,7 +104,7 @@ const EmployeesRoot = () => {
         <EditEmployeeModal
           editEmployeDetails={editEmployeDetails}
           setEditEmployeDetails={setEditEmployeDetails}
-          // refetch={refetch}
+          refetch={refetch}
         />
       )}
     </section>

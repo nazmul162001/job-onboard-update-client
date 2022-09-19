@@ -73,12 +73,6 @@ const Dashboard = ({ children }) => {
       path: "/",
     },
     {
-      title: "Profile",
-      src: "ri-user-line",
-      tooltip: "Profile",
-      path: "/profile",
-    },
-    {
       title: "Task",
       src: "ri-task-line",
       tooltip: "Task",
@@ -90,6 +84,12 @@ const Dashboard = ({ children }) => {
       tooltip: "Applied Jobs",
       path: "/appliedJobs",
       gap: false,
+    },
+    {
+      title: "Profile",
+      src: "ri-user-line",
+      tooltip: "Profile",
+      path: "/profile",
     },
   ];
   const MenusAdmin = [
