@@ -107,15 +107,9 @@ const SingleCandidates = () => {
 
         <div className="order-1 mt-0">
           <div class="tabs shadow-lg rounded-lg">
-            <a href="/" class="tab tab-lg tab-bordered tab-active">
+            <span class="tab tab-lg tab-bordered tab-active">
               Application
-            </a>
-            <a href="/" class="tab tab-lg tab-bordered">
-              Resume
-            </a>
-            <a href="/" class="tab tab-lg tab-bordered">
-              Evaluation
-            </a>
+            </span>
           </div>
           <div className="p-4 shadow-lg my-4 rounded-lg">
             <h2 className="font-semibold text-xl mb-2">CoverLetter</h2>
