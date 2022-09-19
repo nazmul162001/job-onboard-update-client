@@ -94,8 +94,7 @@ const EditEmployeeModal = ({
                   </label>
                   <input
                     type="text"
-                    value={fullName}
-                    onChange={() => fullName}
+                    defaultValue={fullName}
                     placeholder="Enter Full Name"
                     className={
                       theme
