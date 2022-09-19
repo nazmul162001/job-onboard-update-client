@@ -21,8 +21,9 @@ const EmployeesRoot = () => {
   // useEffect(() => {
   //   dispatch(fetchAllEmployeDetails());
   // }, [dispatch]);
-  
+
   const deleteEmployeeDetails = (id) => {
+    console.log(id);
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -32,30 +33,18 @@ const EmployeesRoot = () => {
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
-      if (result.isConfirmed && id) {
-        fetch(`${BASE_API}/applicants/${id}`, {
+      if (result.isConfirmed) {
+        fetch(`${BASE_API}/deleteEmployeDetails/${id}`, {
           method: "DELETE",
           headers: {
-            authorization: `Bearer ${localStorage.getItem("accessToken")}`,
             "content-type": "application/json",
           },
         })
           .then((res) => res.json())
           .then((result) => {
-            if (result?.acknowledged) {
-              fetch(`${BASE_API}/deleteEmployeDetails/${id}`, {
-                method: "DELETE",
-                headers: {
-                  "content-type": "application/json",
-                },
-              })
-                .then((res) => res.json())
-                .then((result) => {
-                  if (result?.deletedCount) {
-                    Swal.fire("Deleted!", "Delete Successfully.", "success");
-                    refetch();
-                  }
-                });
+            if (result?.deletedCount) {
+              Swal.fire("Deleted!", "Delete Successfully.", "success");
+              refetch();
             }
           });
       }
