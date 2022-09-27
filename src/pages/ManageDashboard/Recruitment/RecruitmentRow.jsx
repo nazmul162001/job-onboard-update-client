@@ -1,11 +1,14 @@
-import { FaRegAddressBook } from "react-icons/fa";
 import { BsTelephoneForward } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { BASE_API } from "../../../config";
-import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
-
+// Plugins
+// import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout"; // install this library
+// Import the styles
+import "@react-pdf-viewer/core/lib/styles/index.css";
+import "@react-pdf-viewer/default-layout/lib/styles/index.css";
+// Worker
+// import { Worker } from "@react-pdf-viewer/core"; // install this library
 const RecruitmentRow = ({
   applicant,
   index,
@@ -13,9 +16,10 @@ const RecruitmentRow = ({
   setApplicantData,
   status,
 }) => {
+  // const defaultLayoutPluginInstance = defaultLayoutPlugin();
   const navigate = useNavigate();
-  // console.log(applicant)
-
+  console.log(applicant);
+  // const seeResume = applicant?.candidateResume;
   const handleUpdateStatus = async (id) => {
     const candidates = {
       fullName: applicant?.displayName,
@@ -97,7 +101,16 @@ const RecruitmentRow = ({
   //   return data?.email === applicant?.email;
   // });
   // console.log(filtered);
+  /**
+   * Display a base64 URL inside an iframe in another window.
+   */
+  //  function debugBase64(base64URL){
+  //   var win = window.open();
+  //   win.document.write('<iframe src="' + base64URL  + '" frameborder="0" style="border:0; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%;" allowfullscreen></iframe>');
+  // }
 
+  // // e.g This will open an image in a new window
+  // debugBase64({applicant?.candidateResume});
   return (
     <>
       <tr className="bg-base-100 border-b transition duration-300 ease-in-out">
@@ -122,24 +135,25 @@ const RecruitmentRow = ({
         </td>
 
         <td className="text-sm font-light px-14 py-4 whitespace-nowrap">
-          <a
-            title="Resume/Link"
-            href={applicant?.resume}
-            target="_blank"
-            rel="noreferrer"
+          <button
+            className="btn btn-outline btn-xs capitalize "
+            onClick={() =>
+              navigate(`/dashboard/cndidatsResume/${applicant?._id}`)
+            }
           >
-            <FaRegAddressBook size={25} />
-          </a>
+            View Resume
+          </button>
         </td>
 
         <td className="text-sm font-normal px-6 py-4 text-center whitespace-nowrap">
           <label
             onClick={() => setApplicantData(applicant)}
             htmlFor="task-modal"
-            className={`${status
+            className={`${
+              status
                 ? "hidden"
                 : "btn btn-outline btn-xs cursor-pointer capitalize"
-              }`}
+            }`}
           >
             Send Task
           </label>
@@ -158,7 +172,9 @@ const RecruitmentRow = ({
           </span> */}
           <span
             className="btn btn-outline btn-xs capitalize "
-            onClick={() => navigate(`/dashboard/submittedTask/candidate/${applicant?._id}`)}
+            onClick={() =>
+              navigate(`/dashboard/submittedTask/candidate/${applicant?._id}`)
+            }
           >
             View Submission
           </span>
