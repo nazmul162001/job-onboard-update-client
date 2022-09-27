@@ -1,13 +1,12 @@
-import React, { useEffect, useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
+import React, { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import auth from "../../../Auth/Firebase/Firebase.init";
-import { BASE_API } from "../../../config";
 import Loading from "../../../components/Loading/Loading";
+import { BASE_API } from "../../../config";
 import useCandidateInfo from "../../../hooks/useCandidateInfo";
-import { useNavigate } from "react-router-dom";
-
 const ApplicantModal = ({ job }) => {
   const {
     register,
@@ -22,6 +21,32 @@ const ApplicantModal = ({ job }) => {
   const userInfo = data?.data?.result;
   // console.log(userInfo);
   const [profileUrl, setProfileUrl] = useState(null);
+  const [pdfFile, setPdfFile] = useState(null);
+  const [pdfFileError, setPdfFileError] = useState("");
+
+  // for submit event
+
+  const fileType = ["application/pdf"];
+  const handlePdfFileChange = (e) => {
+    let selectedFile = e.target.files[0];
+    if (selectedFile) {
+      if (selectedFile && fileType.includes(selectedFile.type)) {
+        let reader = new FileReader();
+        reader.readAsDataURL(selectedFile);
+        reader.onloadend = (e) => {
+          setPdfFile(e.target.result);
+          setPdfFileError("");
+        };
+      } else {
+        setPdfFile(null);
+        setPdfFileError("Please select valid pdf file");
+      }
+    } else {
+      console.log("select your file");
+    }
+  };
+  const candidateResume = pdfFile;
+  console.log(candidateResume);
   useEffect(() => {
     if (userInfo?.profileUrl) {
       setProfileUrl(userInfo?.profileUrl);
@@ -68,6 +93,7 @@ const ApplicantModal = ({ job }) => {
 
     const applicantData = {
       ...data,
+      candidateResume: candidateResume,
       displayName,
       email,
       category,
@@ -187,18 +213,16 @@ const ApplicantModal = ({ job }) => {
                   <span className="text-red-500">*</span>
                 </label>
                 <input
-                  type="text"
-                  placeholder="Hyperlink"
-                  defaultValue={userInfo?.resume}
-                  name="userResume"
-                  className="text-black border rounded-lg py-1 text-lg pl-3 hover:border-primary duration-300"
-                  {...register("resume", {
-                    required: {
-                      value: true,
-                      message: "This field is required",
-                    },
-                  })}
+                  required
+                  onChange={handlePdfFileChange}
+                  type="file"
+                  name=""
+                  id=""
                 />
+
+                {pdfFileError && (
+                  <div className="error-msg">{pdfFileError}</div>
+                )}
                 <p className="text-[13px] text-red-500 pl-3">
                   {errors.resume?.message}
                 </p>
