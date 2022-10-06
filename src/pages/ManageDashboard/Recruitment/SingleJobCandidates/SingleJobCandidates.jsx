@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import useAppliedCandidates from "../../../../hooks/useAppliedCandidates";
-import useJob from "../../../../hooks/useJob";
-import RecruitmentRow from "../RecruitmentRow";
+import * as FileSaver from "file-saver";
+import React, { useEffect, useState } from "react";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { ImArrowLeft2 } from "react-icons/im";
-import * as FileSaver from "file-saver";
+import { useNavigate, useParams } from "react-router-dom";
 import * as XLSX from "xlsx";
+import useAppliedCandidates from "../../../../hooks/useAppliedCandidates";
+import useJob from "../../../../hooks/useJob";
 import TaskModal from "../../Candidates/TaskModal";
+import RecruitmentRow from "../RecruitmentRow";
 
 const SingleJobCandidates = () => {
   const [applicantData, setApplicantData] = useState(null);
@@ -16,8 +16,8 @@ const SingleJobCandidates = () => {
   const navigate = useNavigate();
 
   const { data, refetch } = useAppliedCandidates(job);
+
   const countData = data?.data;
-  // console.log(job);
 
   //  Candidate Info To Excel
   const [candidateData, setCandidateData] = useState([]);
@@ -72,6 +72,7 @@ const SingleJobCandidates = () => {
   return (
     <div className="h-screen">
       {/* Job Description  */}
+
       <div className="">
         <div className="shadow-md py-10 space-y-5 px-5">
           <div className="space-y-2">

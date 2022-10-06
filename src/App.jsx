@@ -36,6 +36,7 @@ import Profile from "./pages/ManageDashboard/Profile/Profile";
 import Recruitment from "./pages/ManageDashboard/Recruitment/Recruitment";
 import SendMailCandidates from "./pages/ManageDashboard/Recruitment/SendMailCandidates";
 import SingleJobCandidates from "./pages/ManageDashboard/Recruitment/SingleJobCandidates/SingleJobCandidates";
+import ViewResume from "./pages/ManageDashboard/Recruitment/SingleJobCandidates/ViewResume/ViewResume";
 import ViewSubmission from "./pages/ManageDashboard/Recruitment/SingleJobCandidates/ViewSubmission/ViewSubmission";
 import JobTask from "./pages/ManageDashboard/WelcomeDashboard/CandidateDashboard/JobTask/JobTask";
 import TaskDetails from "./pages/ManageDashboard/WelcomeDashboard/CandidateDashboard/JobTask/TaskDetails";
@@ -164,6 +165,10 @@ function App() {
             <Route
               path="candidates/:candidatesID"
               element={<SingleCandidates />}
+            />
+            <Route
+              path="cndidatsResume/:resumeId"
+              element={<ViewResume />}
             />
             <Route
               path="allRecentApplicants"
