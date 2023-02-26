@@ -2,7 +2,7 @@
 // ========== emtiaz api =================
 // export const BASE_API = "https://job-on-board-server.vercel.app";
 // =============== nazmul api =================
-// export const BASE_API = "https://job-onboard-server-production.up.railway.app";
+export const BASE_API = "https://job-onboard-server-production.up.railway.app";
 // ================ New api =================
-export const BASE_API =
-  'https://job-onboard-update-server-production.up.railway.app/'
+// export const BASE_API =
+//   'https://job-onboard-update-server-production.up.railway.app/'

@@ -207,7 +207,7 @@ const ApplicantModal = ({ job }) => {
                 </p>
               </div>
 
-              <div className="flex flex-col space-y-1 gap-y-1 py-2">
+              {/* <div className="flex flex-col space-y-1 gap-y-1 py-2">
                 <label className="md:text-lg pl-2">
                   Your Resume/CV (provide google drive link){" "}
                   <span className="text-red-500">*</span>
@@ -226,7 +226,7 @@ const ApplicantModal = ({ job }) => {
                 <p className="text-[13px] text-red-500 pl-3">
                   {errors.resume?.message}
                 </p>
-              </div>
+              </div> */}
 
               {/* social link  */}
 
