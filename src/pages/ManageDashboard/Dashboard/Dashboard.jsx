@@ -91,12 +91,12 @@ const Dashboard = ({ children }) => {
       tooltip: "Profile",
       path: "/profile",
     },
-    {
-      title: "Profile",
-      src: "ri-user-line",
-      tooltip: "My Profile",
-      path: "/myProfile",
-    },
+    // {
+    //   title: "Profile",
+    //   src: "ri-user-line",
+    //   tooltip: "My Profile",
+    //   path: "/myProfile",
+    // },
   ];
   const MenusAdmin = [
     {

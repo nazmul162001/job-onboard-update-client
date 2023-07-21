@@ -42,11 +42,11 @@ const Navbar = () => {
           Find Jobs
         </NavLink>
       </li>
-      <li className="py-1 lg:py-0">
+      {/* <li className="py-1 lg:py-0">
         <NavLink className="uppercase" to="/blog">
           Blog
         </NavLink>
-      </li>
+      </li> */}
       <li className="py-1 lg:py-0">
         <NavLink className="uppercase" to="/applicant-tracking">
           Tracking System
