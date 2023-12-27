@@ -176,9 +176,9 @@ const Navbar = () => {
             </div> */}
             {!user && (
               <div className="dropdown dropdown-end">
-                <label tabIndex="0" className="btn btn-primary text-white">
+                <label tabIndex="0" className=" text-white bg-primary px-3 py-1 md:py-2 flex items-center rounded">
                   Get Started{" "}
-                  <MdOutlineKeyboardArrowRight className="text-2xl" />
+                  <MdOutlineKeyboardArrowRight className="text-xl md:text-2xl" />
                 </label>
                 <ul
                   tabIndex="0"

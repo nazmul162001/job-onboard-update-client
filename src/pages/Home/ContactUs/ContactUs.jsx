@@ -26,7 +26,7 @@ const ContactUs = () => {
             <p className="text-sm font-bold my-3">Contact Customer Support</p>
             <p className='text-sm my-3'>Sometimes you need a little help from your friends. Or a Job Onboard Support rep. Don't worry... we're here for you.</p>
             <Link to='/contact-us'>
-              <button className='p-5 bg-orange-500 my-5 rounded-lg text-white text-sm'>Contact Support</button>
+              <button className='p-5 bg-orange-500 my-5 rounded-lg text-white text-sm py-2 md:py-4'>Contact Support</button>
             </Link>
           </div>
         </div>

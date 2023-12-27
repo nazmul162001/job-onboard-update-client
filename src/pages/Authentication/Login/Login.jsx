@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   useSignInWithEmailAndPassword,
   useSignInWithGoogle,
@@ -13,6 +13,7 @@ import Loading from "../../../components/Loading/Loading";
 import usePasswordToggle from "../../../hooks/usePasswordToggle";
 import useTitle from "../../../hooks/useTitle";
 import useToken from "../../../hooks/useToken";
+import { FaRegCopy } from "react-icons/fa";
 
 const Login = () => {
   useTitle("Login");
@@ -66,6 +67,24 @@ const Login = () => {
     signInWithEmailAndPassword(data.email, data.password);
   };
 
+  const handleCopy = (text) => {
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        toast.success("Copied to clipboard!", {
+          duration: 2000,
+          position: "top-center",
+        });
+      })
+      .catch((error) => {
+        console.error("Failed to copy:", error);
+        toast.error("Copy failed. Please try again.", {
+          duration: 2000,
+          position: "top-center",
+        });
+      });
+  };
+
   return (
     <section className="container mx-auto bg-base-100 px-3 lg:px-10 py-3 lg:py-0">
       <div className="hero bg-base-100">
@@ -111,6 +130,35 @@ const Login = () => {
                         <label className="label">
                           <span className="label-text">Email</span>
                         </label>
+                        <div className="p-2 mb-2 border">
+                          <p className="flex gap-2 items-center text-[12px]">
+                            <span>user@gmail.com</span>
+                            <span
+                              onClick={() => handleCopy("user@gmail.com")}
+                              className="px-4 text-sm py-0 label-text cursor-pointer"
+                            >
+                              <FaRegCopy />
+                            </span>
+                          </p>
+                          <p className="flex gap-2 items-center text-[12px] my-1">
+                            <span>hr@gmail.com</span>
+                            <span
+                              onClick={() => handleCopy("hr@gmail.com")}
+                              className="px-4 text-sm py-0 label-text cursor-pointer"
+                            >
+                              <FaRegCopy />
+                            </span>
+                          </p>
+                          <p className="flex gap-2 items-center text-[12px] my-1">
+                            <span>admin@gmail.com</span>
+                            <span
+                              onClick={() => handleCopy("admin@gmail.com")}
+                              className="px-4 text-sm py-0 label-text cursor-pointer"
+                            >
+                              <FaRegCopy />
+                            </span>
+                          </p>
+                        </div>
                         <input
                           type="email"
                           name="email"
@@ -147,6 +195,17 @@ const Login = () => {
                         <label className="label">
                           <span className="label-text">Password</span>
                         </label>
+                        <div className="p-2 mb-2 border">
+                          <p className="flex gap-2 items-center text-[12px]">
+                            <span>112233</span>
+                            <span
+                              onClick={() => handleCopy("112233")}
+                              className="px-4 text-sm py-0 label-text cursor-pointer"
+                            >
+                              <FaRegCopy />
+                            </span>
+                          </p>
+                        </div>
                         <div className="flex items-center relative">
                           <input
                             type={type}
