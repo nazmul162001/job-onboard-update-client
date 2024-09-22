@@ -116,7 +116,7 @@ const Login = () => {
                         HR Manager
                       </Link>
                     </p>
-{/*                     <div className="block lg:flex gap-2 py-2 lg:py-6 mx-auto">
+                    <div className="block lg:flex gap-2 py-2 lg:py-6 mx-auto">
                       <button
                         onClick={() => signInWithGoogle()}
                         className="btn btn-outline border-primary flex items-center content-center rounded hover:btn-primary mb-2 lg:mb-0"
@@ -124,7 +124,7 @@ const Login = () => {
                         <FcGoogle className="text-2xl mr-2"></FcGoogle>Login
                         with Google
                       </button>
-                    </div> */}
+                    </div>
                     <form onSubmit={handleSubmit(onSubmit)}>
                       <div className="form-control w-full max-w-md">
                         <label className="label">
