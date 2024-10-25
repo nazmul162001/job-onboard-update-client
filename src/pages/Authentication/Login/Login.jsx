@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import {
   useSignInWithEmailAndPassword,
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
+import { FaRegCopy } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import Fade from "react-reveal/Fade";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -13,8 +14,7 @@ import Loading from "../../../components/Loading/Loading";
 import usePasswordToggle from "../../../hooks/usePasswordToggle";
 import useTitle from "../../../hooks/useTitle";
 import useToken from "../../../hooks/useToken";
-import { FaRegCopy } from "react-icons/fa";
-
+// updated code
 const Login = () => {
   useTitle("Login");
   const [passwordTogle, type, icon] = usePasswordToggle();
