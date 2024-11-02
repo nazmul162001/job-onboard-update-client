@@ -7,7 +7,6 @@ import {
 } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import { FcGoogle } from "react-icons/fc";
 import Fade from "react-reveal/Fade";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../Auth/Firebase/Firebase.init";
@@ -113,7 +112,7 @@ const SignUp = () => {
                         Login
                       </Link>
                     </p>
-                    <div className="block lg:flex justify-center items-center gap-2 py-2 lg:py-6 mx-auto">
+                    {/* <div className="block lg:flex justify-center items-center gap-2 py-2 lg:py-6 mx-auto">
                       <button
                         onClick={() => signInWithGoogle()}
                         className="btn btn-outline border-primary flex items-center content-center rounded hover:btn-primary mb-2 lg:mb-0"
@@ -121,7 +120,7 @@ const SignUp = () => {
                         <FcGoogle className="text-2xl mr-2"></FcGoogle>Sign Up
                         with Google
                       </button>
-                    </div>
+                    </div> */}
                     <form onSubmit={handleSubmit(onSubmit)}>
                       <div className="form-control w-full max-w-md">
                         <label className="label">

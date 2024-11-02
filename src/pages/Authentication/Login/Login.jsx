@@ -6,7 +6,6 @@ import {
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import { FaRegCopy } from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc";
 import Fade from "react-reveal/Fade";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../Auth/Firebase/Firebase.init";
@@ -106,17 +105,7 @@ const Login = () => {
                     <h2 className="text-center text-xl lg:text-2xl font-bold pb-3">
                       Please Login
                     </h2>
-                    <p className="text-center font-semibold">
-                      Don't have an account?{" "}
-                      <Link className="text-primary" to="/signUp">
-                        Candidate
-                      </Link>{" "}
-                      or{" "}
-                      <Link className="text-primary" to="/signUp/hr">
-                        HR Manager
-                      </Link>
-                    </p>
-                    <div className="block lg:flex gap-2 py-2 lg:py-6 mx-auto">
+                    {/* <div className="block lg:flex gap-2 py-2 lg:py-6 mx-auto">
                       <button
                         onClick={() => signInWithGoogle()}
                         className="btn btn-outline border-primary flex items-center content-center rounded hover:btn-primary mb-2 lg:mb-0"
@@ -124,7 +113,7 @@ const Login = () => {
                         <FcGoogle className="text-2xl mr-2"></FcGoogle>Login
                         with Google
                       </button>
-                    </div>
+                    </div> */}
                     <form onSubmit={handleSubmit(onSubmit)}>
                       <div className="form-control w-full max-w-md">
                         <label className="label">
@@ -258,6 +247,18 @@ const Login = () => {
                         </Link>
                       </span>
                     </form>
+                    <div>
+                      <p className="text-center font-semibold">
+                        Don't have an account?{" "}
+                        <Link className="text-primary" to="/signUp">
+                          Candidate
+                        </Link>{" "}
+                        or{" "}
+                        <Link className="text-primary" to="/signUp/hr">
+                          HR Manager
+                        </Link>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
