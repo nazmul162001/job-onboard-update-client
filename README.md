@@ -1,7 +1,5 @@
 # A Job Recruitment Website Built with React and Redux.
 
-#### Server : https://github.com/EmtiazHossainE2/Job-OnBoard-Server
-
 ## Project URL – <a href="https://job-onboard-client.vercel.app/" rel="noopener" target="_blank">Job OnBoard</a>
 
 #### Candidate Credential : user@gmail.com Password : 112233
